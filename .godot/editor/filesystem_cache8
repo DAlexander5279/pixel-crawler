@@ -1,6 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712508368
-Game.tscn::PackedScene::1326420792384970258::1712508079::0::1::::<><>::
+::res://::1712688365
+Game.tscn::PackedScene::1326420792384970258::1712508418::0::1::::<><>::
 icon.svg::CompressedTexture2D::7670971187659585607::1712507312::1712507320::1::::<><>::
-::res://Assets/::1712508404
+player.tscn::PackedScene::4345398370603249696::1712688383::0::1::::<><>::uid://c13lv55di4f6b::::res://Assets/player_assets/player-idle-1.png
+::res://Assets/::1712688225
+::res://Assets/player_assets/::1712688225
+player-idle-1.png::CompressedTexture2D::6656260889873932155::1712688222::1712688225::1::::<><>::
 ::res://Assets/Sounds/::1712508404
+::res://Assets/TileMap/::1712508414
