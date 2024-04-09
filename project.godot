@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="PixelCrawler"
+run/main_scene="res://test_scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,6 +22,11 @@ window/size/viewport_height=360
 window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="viewport"
+
+[layer_names]
+
+2d_physics/layer_1="Platforms"
+2d_physics/layer_2="Player"
 
 [rendering]
 
