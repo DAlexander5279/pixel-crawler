@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712689062
+::res://::1712710948
 Game.tscn::PackedScene::1326420792384970258::1712688521::0::1::::<><>::
 icon.svg::CompressedTexture2D::7670971187659585607::1712507312::1712507320::1::::<><>::
-test_scene.tscn::PackedScene::1002357808898517276::1712688571::0::1::::<><>::uid://b257cugvll81a::::res://Assets/player_assets/player.tscn
+test_scene.tscn::PackedScene::1002357808898517276::1712690278::0::1::::<><>::uid://b257cugvll81a::::res://Assets/player_assets/player.tscn<>uid://dwq7f5aqeqwiq::::res://Assets/testing_assets/test_platforms.jpg
 ::res://Assets/::1712689160
-::res://Assets/player_assets/::1712688538
+::res://Assets/player_assets/::1712689852
 player-idle-1.png::CompressedTexture2D::6656260889873932155::1712688222::1712688225::1::::<><>::
-player.tscn::PackedScene::4345398370603249696::1712688538::0::1::::<><>::uid://c13lv55di4f6b::::res://Assets/player_assets/player-idle-1.png
+player.tscn::PackedScene::4345398370603249696::1712689852::0::1::::<><>::uid://c13lv55di4f6b::::res://Assets/player_assets/player-idle-1.png
 ::res://Assets/Sounds/::1712508404
 ::res://Assets/testing_assets/::1712689169
 test_platforms.jpg::CompressedTexture2D::8738400104352494392::1712689169::1712689169::1::::<><>::
