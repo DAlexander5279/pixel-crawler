@@ -25,7 +25,10 @@ func player_move(delta):
 		
 		
 	if movement_direction() != 0:
-		player_sprite.flip_h = false if movement_direction() > 0 else true
+		if movement_direction() > 0:
+			player_sprite.flip_h = false
+		else:
+			player_sprite.flip_h = true
 	
 func movement_direction():
 	var direction = Input.get_axis("move_left", "move_right")
