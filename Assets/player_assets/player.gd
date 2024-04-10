@@ -10,7 +10,7 @@ extends CharacterBody2D
 @export var current_jumps : int = 0
 
 #State machine variables
-enum State{Idle, Running}
+enum State{Idle, Running, Jump}
 var current_state : State 
 
 #calls on start
@@ -46,7 +46,8 @@ func player_move(delta):
 		
 		
 	if movement_direction() != 0:
-		current_state = State.Running
+		if is_on_floor():
+			current_state = State.Running
 		if movement_direction() > 0:
 			player_sprite.flip_h = false
 		else:
@@ -61,6 +62,7 @@ func player_jump(delta):
 	if Input.is_action_just_pressed("jump") and current_jumps < max_jumps:
 		velocity.y = jumpForce
 		current_jumps = current_jumps + 1
+		current_state = State.Jump
 	
 	
 func play_animations():
@@ -69,6 +71,8 @@ func play_animations():
 			player_sprite.play("idle")
 		State.Running:
 			player_sprite.play("running")
+		State.Jump:
+			player_sprite.play("jump")
 #returns variable based on input direction
 func movement_direction():
 	var direction = Input.get_axis("move_left", "move_right")

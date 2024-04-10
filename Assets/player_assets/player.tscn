@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://b257cugvll81a"]
+[gd_scene load_steps=27 format=3 uid="uid://b257cugvll81a"]
 
 [ext_resource type="Script" path="res://Assets/player_assets/player.gd" id="1_olnh1"]
 [ext_resource type="Texture2D" uid="uid://blesoe6jnrcm1" path="res://Assets/player_assets/Animations/player-idle.png" id="2_2cc7o"]
+[ext_resource type="Texture2D" uid="uid://ckbx5c0lo00rs" path="res://Assets/player_assets/Animations/player-jump.png" id="3_1tjej"]
 [ext_resource type="Texture2D" uid="uid://c345eeobrpx1t" path="res://Assets/player_assets/Animations/player-run.png" id="3_nxesh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_penab"]
@@ -22,6 +23,30 @@ region = Rect2(160, 0, 80, 80)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bqqy6"]
 atlas = ExtResource("2_2cc7o")
 region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyfm0"]
+atlas = ExtResource("3_1tjej")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpg08"]
+atlas = ExtResource("3_1tjej")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru0mg"]
+atlas = ExtResource("3_1tjej")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kk6po"]
+atlas = ExtResource("3_1tjej")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idtjq"]
+atlas = ExtResource("3_1tjej")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1h3k"]
+atlas = ExtResource("3_1tjej")
+region = Rect2(400, 0, 80, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tyf0c"]
 atlas = ExtResource("3_nxesh")
@@ -89,6 +114,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_nyfm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpg08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru0mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kk6po")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idtjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1h3k")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_tyf0c")
 }, {
 "duration": 1.0,
@@ -136,8 +184,8 @@ position = Vector2(-1, -93.5)
 shape = SubResource("RectangleShape2D_penab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, -104)
+position = Vector2(2, -106)
 scale = Vector2(4.31562, 4.31562)
 sprite_frames = SubResource("SpriteFrames_nk2xv")
-animation = &"running"
-frame_progress = 0.21423
+animation = &"jump"
+frame_progress = 0.258624
