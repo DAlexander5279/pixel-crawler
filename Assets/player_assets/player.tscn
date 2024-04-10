@@ -64,4 +64,4 @@ position = Vector2(3, -104)
 scale = Vector2(4.31562, 4.31562)
 sprite_frames = SubResource("SpriteFrames_nk2xv")
 animation = &"idle"
-frame_progress = 0.705676
+frame_progress = 0.197912
