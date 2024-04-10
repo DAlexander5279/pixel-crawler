@@ -1,6 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712508368
-Game.tscn::PackedScene::1326420792384970258::1712508079::0::1::::<><>::
-icon.svg::CompressedTexture2D::7670971187659585607::1712507312::1712507320::1::::<><>::
-::res://Assets/::1712508404
-::res://Assets/Sounds/::1712508404
+::res://::1712692874
+::res://Assets/::1712681479
+icon.svg::CompressedTexture2D::7670971187659585607::1712509313::1712590759::1::::<><>::
+::res://Assets/Environment/::1712598900
+2d_metroidvania_serie_mockup_1_tileset.png::CompressedTexture2D::8243933794728535509::1712598891::1712598900::1::::<><>::
+::res://Assets/Interactables/::1712601247
+chest-sheet.png::CompressedTexture2D::7595459458607276844::1712601223::1712601223::1::::<><>::
+coin.png::CompressedTexture2D::1147954403211474705::1712601223::1712601223::1::::<><>::
+Crate-animated.png::CompressedTexture2D::1379192011895052613::1712601223::1712601223::1::::<><>::
+JumpPowerUp.png::CompressedTexture2D::9143318494032132867::1712601223::1712601223::1::::<><>::
+key.png::CompressedTexture2D::6745172034968407505::1712601223::1712601223::1::::<><>::
+Lamp.png::CompressedTexture2D::5690683725736144216::1712601223::1712601223::1::::<><>::
+LanternW3.png::CompressedTexture2D::9003554475867851592::1712601223::1712601223::1::::<><>::
+spikes_spritesheet.png::CompressedTexture2D::7656579084570761353::1712601223::1712601223::1::::<><>::
+temporaryPlatform.png::CompressedTexture2D::3313580395753193358::1712601223::1712601223::1::::<><>::
+::res://Assets/Menus/::1712681562
+background_sprite_1.png::CompressedTexture2D::4959069246617866991::1712681562::1712681562::1::::<><>::
+pixel_crawler_logo.png::CompressedTexture2D::7864157220435469127::1712681474::1712681479::1::::<><>::
+::res://Assets/UI/::1712601248
+HeartSpriteSheet.png::CompressedTexture2D::5490896750910596315::1712601239::1712601248::1::::<><>::
+::res://Scenes/::1712681036
+Game.tscn::PackedScene::1326420792384970258::1712509313::0::1::::<><>::
+::res://Scenes/Levels/::1712683310
+world_1.tscn::PackedScene::7975487573099747835::1712683310::0::1::::<><>::res://Scripts/Camera/PanningCamera.gd<>uid://dppondh0vsp38::::res://Assets/Environment/2d_metroidvania_serie_mockup_1_tileset.png
+::res://Scenes/Main Menu/::1712683280
+main_menu.gd::GDScript::-1::1712683259::0::1::::MainMenu<>Control<>::
+main_menu.tscn::PackedScene::8561252261400311121::1712683280::0::1::::<><>::res://Scenes/Main Menu/main_menu.gd<>uid://ccwhe7y6hx3wl::::res://Assets/Menus/background_sprite_1.png
+::res://Scripts/::1712682725
+::res://Scripts/Camera/::1712679405
+PanningCamera.gd::GDScript::-1::1712679405::0::1::::<>Camera2D<>::

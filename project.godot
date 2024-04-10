@@ -11,5 +11,19 @@ config_version=5
 [application]
 
 config/name="PixelCrawler"
+run/main_scene="res://Scenes/Main Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Ground"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
