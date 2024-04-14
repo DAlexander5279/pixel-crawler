@@ -9,6 +9,10 @@ extends CharacterBody2D
 @export var max_jumps : int = 1
 @export var current_jumps : int = 0
 
+#health variables
+@export var max_health : int = 100
+@export var current_health : int = 100
+
 #State machine variables
 enum State{Idle, Running, Jump}
 var current_state : State 
@@ -27,6 +31,13 @@ func _physics_process(delta):
 	move_and_slide()
 	play_animations()
 
+
+
+#function to take damage : called by enemy projectiles
+
+
+func player_take_damage(amount):
+	current_health = current_health - amount
 
 #pushes player down by a force
 func player_falling(delta):
