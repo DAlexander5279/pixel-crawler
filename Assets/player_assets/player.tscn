@@ -168,7 +168,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running",
-"speed": 13.0
+"speed": 15.0
 }]
 
 [node name="player" type="CharacterBody2D"]
@@ -187,5 +187,5 @@ shape = SubResource("RectangleShape2D_penab")
 position = Vector2(2, -106)
 scale = Vector2(4.31562, 4.31562)
 sprite_frames = SubResource("SpriteFrames_nk2xv")
-animation = &"jump"
-frame_progress = 0.258624
+animation = &"running"
+frame_progress = 0.735207
