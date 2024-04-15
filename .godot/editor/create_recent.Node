@@ -1,3 +1,6 @@
+Sprite2D
+Node2D
+TileMap
 AnimatedSprite2D
 Button
 VBoxContainer
@@ -7,6 +10,3 @@ Control
 MarginContainer
 TextureRect
 Camera2D
-Node2D
-Sprite2D
-TileMap
