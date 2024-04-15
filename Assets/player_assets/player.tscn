@@ -265,3 +265,6 @@ scale = Vector2(4.31562, 4.31562)
 sprite_frames = SubResource("SpriteFrames_nk2xv")
 animation = &"run_shooting"
 frame_progress = 0.425368
+
+[node name="FirePoint" type="Marker2D" parent="."]
+position = Vector2(84, -108)

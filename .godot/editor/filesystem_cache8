@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713138823
+::res://::1713141447
 test_scene.tscn::PackedScene::1002357808898517276::1712883680::0::1::::<><>::uid://b257cugvll81a::::res://Assets/player_assets/player.tscn<>uid://dwq7f5aqeqwiq::::res://Assets/testing_assets/test_platforms.jpg
 ::res://Assets/::1712788898
 icon.svg::CompressedTexture2D::7670971187659585607::1712716940::1712716940::1::::<><>::
@@ -18,14 +18,17 @@ temporaryPlatform.png::CompressedTexture2D::3313580395753193358::1712716940::171
 ::res://Assets/Menus/::1712716940
 background_sprite_1.png::CompressedTexture2D::4959069246617866991::1712716940::1712716940::1::::<><>::
 pixel_crawler_logo.png::CompressedTexture2D::7864157220435469127::1712716940::1712716940::1::::<><>::
-::res://Assets/player_assets/::1713135489
+::res://Assets/player_assets/::1713141032
 player.gd::GDScript::-1::1713135489::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4345398370603249696::1713135489::0::1::::<><>::res://Assets/player_assets/player.gd<>uid://blesoe6jnrcm1::::res://Assets/player_assets/Animations/player-idle.png<>uid://ckbx5c0lo00rs::::res://Assets/player_assets/Animations/player-jump.png<>uid://c345eeobrpx1t::::res://Assets/player_assets/Animations/player-run.png
-::res://Assets/player_assets/Animations/::1713138888
+player.tscn::PackedScene::4345398370603249696::1713138969::0::1::::<><>::res://Assets/player_assets/player.gd<>uid://blesoe6jnrcm1::::res://Assets/player_assets/Animations/player-idle.png<>uid://ckbx5c0lo00rs::::res://Assets/player_assets/Animations/player-jump.png<>uid://c345eeobrpx1t::::res://Assets/player_assets/Animations/player-run.png<>uid://cmyc8khq4h8gp::::res://Assets/player_assets/Animations/player-run-shoot.png
+::res://Assets/player_assets/Animations/::1713140004
 player-idle.png::CompressedTexture2D::3167873640121460850::1712789336::1712789336::1::::<><>::
 player-jump.png::CompressedTexture2D::5478244390357682432::1712789336::1712789336::1::::<><>::
 player-run-shoot.png::CompressedTexture2D::5664833459137586215::1713138888::1713138889::1::::<><>::
 player-run.png::CompressedTexture2D::6799824828866888459::1712789336::1712789336::1::::<><>::
+::res://Assets/player_assets/projectiles/::1713141240
+projectile_1.tscn::PackedScene::1564051973435660815::1713141240::0::1::::<><>::uid://fbn88vnxqq4g::::res://Assets/player_assets/projectiles/shot.png
+shot.png::CompressedTexture2D::353858614382539376::1713141025::1713141032::1::::<><>::
 ::res://Assets/Sounds/::1712508404
 ::res://Assets/testing_assets/::1712716238
 test_platforms.jpg::CompressedTexture2D::8738400104352494392::1712716238::1712716238::1::::<><>::
