@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713198313
+::res://::1713297052
 test_scene.tscn::PackedScene::1002357808898517276::1713197080::0::1::::<><>::uid://b257cugvll81a::::res://Assets/player_assets/player.tscn<>uid://dwq7f5aqeqwiq::::res://Assets/testing_assets/test_platforms.jpg
 ::res://Assets/::1712715735
 icon.svg::CompressedTexture2D::7670971187659585607::1712715735::1712715735::1::::<><>::
@@ -47,8 +47,8 @@ test_platforms.jpg::CompressedTexture2D::8738400104352494392::1712715735::171271
 HeartSpriteSheet.png::CompressedTexture2D::5490896750910596315::1712715735::1712715735::1::::<><>::
 ::res://Scenes/::1712715735
 Game.tscn::PackedScene::1326420792384970258::1712715735::0::1::::<><>::
-::res://Scenes/Levels/::1713198042
-world_1.tscn::PackedScene::7975487573099747835::1713198042::0::1::::<><>::res://Scripts/Camera/PanningCamera.gd<>uid://56m1yvx6ds8l::::res://Assets/Environment/layers/tilesets.png<>uid://b8s761wf4tueo::::res://Assets/Environment/layers/background.png<>uid://ck0kkmltaexkh::::res://Assets/Environment/layers/middleground.png
+::res://Scenes/Levels/::1713200473
+world_1.tscn::PackedScene::7975487573099747835::1713200473::0::1::::<><>::res://Scripts/Camera/PanningCamera.gd<>uid://56m1yvx6ds8l::::res://Assets/Environment/layers/tilesets.png<>uid://b257cugvll81a::::res://Assets/player_assets/player.tscn
 ::res://Scenes/Main Menu/::1712717676
 main_menu.gd::GDScript::-1::1712715735::0::1::::MainMenu<>Control<>::
 main_menu.tscn::PackedScene::8561252261400311121::1712717676::0::1::::<><>::res://Scenes/Main Menu/main_menu.gd<>uid://ccwhe7y6hx3wl::::res://Assets/Menus/background_sprite_1.png

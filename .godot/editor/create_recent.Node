@@ -1,3 +1,7 @@
+TextureRect
+ParallaxLayer
+ParallaxBackground
+ColorRect
 Sprite2D
 Node2D
 TileMap
@@ -8,5 +12,3 @@ HBoxContainer
 Label
 Control
 MarginContainer
-TextureRect
-Camera2D
