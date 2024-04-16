@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmyc8khq4h8gp" path="res://Assets/player_assets/Animations/player-run-shoot.png" id="4_cb66u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_penab"]
-size = Vector2(94, 185)
+size = Vector2(94, 161)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0xyf"]
 atlas = ExtResource("2_2cc7o")
@@ -248,23 +248,18 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 13
+collision_mask = 2
 script = ExtResource("1_olnh1")
-jumpForce = -400
-max_jumps = 2
-current_jumps = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -93.5)
+position = Vector2(-1, -81.5)
 shape = SubResource("RectangleShape2D_penab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -106)
 scale = Vector2(4.31562, 4.31562)
 sprite_frames = SubResource("SpriteFrames_nk2xv")
-animation = &"run_shooting"
-frame_progress = 0.425368
+animation = &"idle"
 
 [node name="FirePoint" type="Marker2D" parent="."]
 position = Vector2(84, -108)

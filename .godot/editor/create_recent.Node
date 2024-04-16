@@ -1,6 +1,8 @@
+CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
 Timer
 Marker2D
-AnimatedSprite2D
 Button
 VBoxContainer
 HBoxContainer
@@ -11,4 +13,3 @@ TextureRect
 Camera2D
 Node2D
 Sprite2D
-TileMap
