@@ -1,5 +1,6 @@
-res://Assets/Enemies/Crab/crab.tscn
-res://test_scene.tscn
-res://Assets/Enemies/Crab/crab.gd
+res://Assets/testing_assets/test_world.tscn
 res://Assets/player_assets/player.tscn
-res://Assets/player_assets/player.gd
+res://test_scene.tscn
+res://Assets/Enemies/Crab/crab.tscn
+res://Assets/Enemies/Crab/crab.gd
+res://Scenes/Levels/world_1.tscn
