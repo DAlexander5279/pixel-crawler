@@ -1,3 +1,10 @@
+TextureRect
+ParallaxLayer
+ParallaxBackground
+ColorRect
+Sprite2D
+Node2D
+TileMap
 AnimatedSprite2D
 Button
 VBoxContainer
@@ -5,8 +12,3 @@ HBoxContainer
 Label
 Control
 MarginContainer
-TextureRect
-Camera2D
-Node2D
-Sprite2D
-TileMap
