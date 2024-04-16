@@ -8,8 +8,8 @@ var PrimaryProjectile = preload("res://Assets/player_assets/projectiles/projecti
 
 #variables controlling gravity and movement
 @export var gravityForce : int = 1000
-@export var playerSpeed : int = 300
-@export var jumpForce : int = -300
+@export var playerSpeed : int = 20000
+@export var jumpForce : int = -30000
 @export var max_jumps : int = 1
 @export var current_jumps : int = 0
 
@@ -73,9 +73,9 @@ func player_idle(delta):
 func player_move(delta):
 	
 	if movement_direction():
-		velocity.x = movement_direction() * playerSpeed
+		velocity.x = movement_direction() * playerSpeed * delta
 	else:
-		velocity.x = move_toward(velocity.x, 0 , playerSpeed)
+		velocity.x = move_toward(velocity.x, 0 , playerSpeed * delta)
 		
 		
 	if movement_direction() != 0:
@@ -93,7 +93,7 @@ func player_jump(delta):
 		current_jumps = 0
 	
 	if Input.is_action_just_pressed("jump") and current_jumps < max_jumps:
-		velocity.y = jumpForce
+		velocity.y = jumpForce * delta
 		current_jumps = current_jumps + 1
 		current_state = State.Jump
 	
