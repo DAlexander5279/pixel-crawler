@@ -2,3 +2,4 @@ res://Assets/player_assets/player.tscn
 res://Assets/Enemies/Crab/crab.tscn
 res://Assets/testing_assets/test_world.tscn
 res://Scenes/Levels/world_1.tscn
+res://Assets/player_assets/player.gd
