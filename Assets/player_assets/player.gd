@@ -39,6 +39,7 @@ func _physics_process(delta):
 	play_animations()
 
 
+
 func flip_projectile_position():
 	var direction = movement_direction()
 	if direction > 0:
