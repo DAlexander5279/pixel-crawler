@@ -428,3 +428,9 @@ stretch_mode = 1
 
 [node name="Crab" parent="." instance=ExtResource("6_fjnvv")]
 position = Vector2(323, 152)
+
+[node name="Crab2" parent="." instance=ExtResource("6_fjnvv")]
+position = Vector2(534, 145)
+
+[node name="Crab3" parent="." instance=ExtResource("6_fjnvv")]
+position = Vector2(650, 146)
