@@ -1,9 +1,4 @@
-res://Scenes/Prefabs
-res://Scripts
-res://Assets/UI
-res://Assets/player_assets
 res://
-res://Assets/Enemies/Animation
 res://Assets/player_assets/Animations
 res://Assets/Enemies/Crab
 res://Assets/player_assets/projectiles
