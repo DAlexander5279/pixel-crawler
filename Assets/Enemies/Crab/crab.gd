@@ -49,3 +49,7 @@ func walking(delta):
 	current_state = State.Walk
 	velocity.x = direction.x * SPEED * delta
 	
+
+
+func _on_hitbox_area_entered(area):
+	pass # Replace with function body.
