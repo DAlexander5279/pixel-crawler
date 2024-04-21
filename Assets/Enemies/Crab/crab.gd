@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 #sprite reference
 @onready var sprite = $AnimatedSprite2D
-
+var deathEffect = preload("res://Assets/Enemies/Animation/death_effect.tscn")
 #movement variables
 @export var gravityForce : int = 1000
 @export var SPEED : int = 3000
@@ -12,6 +12,9 @@ var direction : Vector2 = Vector2.LEFT
 @onready var ledgeCheckleft = $LedgeCheckLeft
 @onready var ledgeCheckRight = $LedgeCheckRight
 
+
+#Health and damage
+@export var health = 5
 
 enum State {Idle, Walk}
 var current_state : State
@@ -51,5 +54,12 @@ func walking(delta):
 	
 
 
-func _on_hitbox_area_entered(area):
-	pass # Replace with function body.
+func _on_hitbox_area_entered(area : Area2D):
+	if(area.get_parent().has_method("get_damage")):
+		var bullet = area.get_parent() as Node
+		health -= bullet.damage
+		if(health <= 0):
+			var deatheffectInstance = deathEffect.instantiate() as Node2D
+			deatheffectInstance.global_position = global_position 
+			get_parent().add_child(deatheffectInstance)
+			queue_free()
