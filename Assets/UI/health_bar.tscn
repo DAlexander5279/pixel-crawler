@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://gestvek5otb6"]
+
+[ext_resource type="Script" path="res://Assets/UI/health_bar.gd" id="1_3vmoa"]
+[ext_resource type="Texture2D" uid="uid://ckh3jc7j0hcsh" path="res://Assets/UI/HeartSpriteSheet.png" id="2_oveas"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ty534"]
+atlas = ExtResource("2_oveas")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqaas"]
+atlas = ExtResource("2_oveas")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c55g6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ty534")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqaas")
+}],
+"loop": false,
+"name": &"off",
+"speed": 5.0
+}]
+
+[node name="HealthBar" type="Node2D"]
+script = ExtResource("1_3vmoa")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_c55g6")
+autoplay = "default"
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(24, 7)
+sprite_frames = SubResource("SpriteFrames_c55g6")
+autoplay = "default"
+
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(42, 7)
+sprite_frames = SubResource("SpriteFrames_c55g6")
+autoplay = "default"

@@ -1,7 +1,9 @@
-Timer
+CanvasLayer
 AnimatedSprite2D
+Sprite2D
 CollisionShape2D
 Area2D
+Timer
 TileMap
 RayCast2D
 CharacterBody2D
@@ -11,4 +13,3 @@ VBoxContainer
 HBoxContainer
 Label
 Control
-MarginContainer

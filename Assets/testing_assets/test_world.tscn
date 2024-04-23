@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://e2xpnn7wb57o"]
+[gd_scene load_steps=10 format=3 uid="uid://e2xpnn7wb57o"]
 
 [ext_resource type="Texture2D" uid="uid://56m1yvx6ds8l" path="res://Assets/Environment/layers/tilesets.png" id="1_14574"]
 [ext_resource type="PackedScene" uid="uid://b257cugvll81a" path="res://Assets/player_assets/player.tscn" id="2_0oan7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b8s761wf4tueo" path="res://Assets/Environment/layers/background.png" id="4_xsakf"]
 [ext_resource type="Texture2D" uid="uid://ck0kkmltaexkh" path="res://Assets/Environment/layers/middleground.png" id="5_jg6vx"]
 [ext_resource type="PackedScene" uid="uid://cmffcnux8ghl" path="res://Assets/Enemies/Crab/crab.tscn" id="6_fjnvv"]
+[ext_resource type="PackedScene" uid="uid://bp5we53whymet" path="res://Assets/UI/screen.tscn" id="7_c3gw6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
 texture = ExtResource("1_14574")
@@ -434,3 +435,5 @@ position = Vector2(534, 145)
 
 [node name="Crab3" parent="." instance=ExtResource("6_fjnvv")]
 position = Vector2(650, 146)
+
+[node name="Screen" parent="." instance=ExtResource("7_c3gw6")]
