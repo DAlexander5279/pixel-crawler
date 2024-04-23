@@ -79,7 +79,7 @@ size = Vector2(23.6979, 4.79169)
 [sub_resource type="CircleShape2D" id="CircleShape2D_l6nf1"]
 radius = 9.38946
 
-[node name="Crab" type="CharacterBody2D"]
+[node name="Crab" type="CharacterBody2D" groups=["Enemies"]]
 position = Vector2(1, -22)
 scale = Vector2(1.92, 1.92)
 collision_layer = 4
@@ -96,7 +96,6 @@ frame_progress = 0.86785
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8.85417)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jbp3k")
 
 [node name="LedgeCheckLeft" type="RayCast2D" parent="."]
