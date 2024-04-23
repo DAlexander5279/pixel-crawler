@@ -13,9 +13,7 @@ var PrimaryProjectile = preload("res://Assets/player_assets/projectiles/projecti
 @export var max_jumps : int = 1
 @export var current_jumps : int = 0
 
-#health variables
-@export var max_health : int = 100
-@export var current_health : int = 100
+
 
 #State machine variables
 enum State{Idle, Running, Jump, Shooting}
@@ -25,6 +23,7 @@ var current_state : State
 func _ready():
 	current_state = State.Idle
 	projectile_spawn_point = bulletMarker.position
+	
 
 
 #controls all physics processes
@@ -37,6 +36,10 @@ func _physics_process(delta):
 	shoot(delta)
 	move_and_slide()
 	play_animations()
+
+
+
+
 
 
 
@@ -58,9 +61,6 @@ func shoot(delta):
 		get_parent().add_child(primary_proj)
 		
 		
-#function to take damage : called by enemy projectiles
-func player_take_damage(amount):
-	current_health = current_health - amount
 
 #pushes player down by a force
 func player_falling(delta):
@@ -114,3 +114,8 @@ func play_animations():
 func movement_direction():
 	var direction = Input.get_axis("move_left", "move_right")
 	return direction
+
+
+func _on_hitbox_body_entered(body : Node2D):
+	if body.is_in_group("Enemies"):
+		HealthManager.decrease_health(1)
