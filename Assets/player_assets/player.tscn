@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b257cugvll81a"]
+[gd_scene load_steps=39 format=3 uid="uid://b257cugvll81a"]
 
 [ext_resource type="Script" path="res://Assets/player_assets/player.gd" id="1_olnh1"]
 [ext_resource type="Texture2D" uid="uid://blesoe6jnrcm1" path="res://Assets/player_assets/Animations/player-idle.png" id="2_2cc7o"]
@@ -247,6 +247,10 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rpwpf"]
+radius = 41.0
+height = 166.0
+
 [node name="player" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_olnh1")
@@ -265,3 +269,13 @@ animation = &"idle"
 
 [node name="FirePoint" type="Marker2D" parent="."]
 position = Vector2(84, -108)
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-3, -91)
+shape = SubResource("CapsuleShape2D_rpwpf")
+debug_color = Color(0.913725, 0.188235, 0.564706, 0.419608)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
