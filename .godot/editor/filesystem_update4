@@ -1,11 +1,5 @@
-res://Assets/player_assets/player.gd
-res://Assets/Enemies/Crab/crab.tscn
+res://Scenes/Prefabs/door.gd
+res://Scenes/Levels/world_1.tscn
 res://Assets/player_assets/player.tscn
-res://Assets/testing_assets/test_world.tscn
-res://Scripts/healthManager.gd
-res://health_bar.tscn
-res://Sprite2D3.gd
-res://health_bar.gd
-res://Assets/UI/health_bar.tscn
-res://Assets/UI/screen.tscn
-res://Assets/UI/health_bar.gd
+res://Scenes/Main Menu/main_menu.tscn
+res://Scenes/Prefabs/door.tscn
