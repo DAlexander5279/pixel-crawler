@@ -1,4 +1,5 @@
+res://Scenes/Prefabs/door.gd
 res://Scenes/Levels/world_1.tscn
 res://Assets/player_assets/player.tscn
-res://Scripts/Trigger.gd
 res://Scenes/Main Menu/main_menu.tscn
+res://Scenes/Prefabs/door.tscn
