@@ -1,9 +1,9 @@
-CanvasLayer
+Timer
 AnimatedSprite2D
+CanvasLayer
 Sprite2D
 CollisionShape2D
 Area2D
-Timer
 TileMap
 RayCast2D
 CharacterBody2D
@@ -12,4 +12,3 @@ Button
 VBoxContainer
 HBoxContainer
 Label
-Control
