@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://bxwcwbbjblpu6"]
+
+[ext_resource type="Script" path="res://PlayerDeathEffect.gd" id="1_m5eu6"]
+[ext_resource type="Texture2D" uid="uid://b5404oc3tg8ru" path="res://Assets/player_assets/Animations/explosion-6.png" id="2_f524c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6275"]
+atlas = ExtResource("2_f524c")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldieh"]
+atlas = ExtResource("2_f524c")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otat7"]
+atlas = ExtResource("2_f524c")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hghpq"]
+atlas = ExtResource("2_f524c")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbehu"]
+atlas = ExtResource("2_f524c")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7cy3"]
+atlas = ExtResource("2_f524c")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6033"]
+atlas = ExtResource("2_f524c")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjpkf"]
+atlas = ExtResource("2_f524c")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lqvdc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6275")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldieh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otat7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hghpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbehu")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_e7cy3")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_h6033")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_rjpkf")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"death",
+"speed": 13.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PlayerDeathEffect" type="Node2D"]
+script = ExtResource("1_m5eu6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -39)
+scale = Vector2(2.02083, 2.02083)
+sprite_frames = SubResource("SpriteFrames_lqvdc")
+animation = &"death"
+autoplay = "death"
+frame = 8
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
