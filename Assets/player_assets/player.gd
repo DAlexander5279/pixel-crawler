@@ -1,6 +1,10 @@
 extends CharacterBody2D
 #reference to sprite
 @onready var player_sprite = $"AnimatedSprite2D"
+
+
+var playerDeathEffect = preload("res://Assets/player_assets/Animations/player_death_effect.tscn")
+var isDead = false
 #bullet reference
 @onready var bulletMarker : Marker2D = $FirePoint
 var projectile_spawn_point
@@ -28,14 +32,15 @@ func _ready():
 
 #controls all physics processes
 func _physics_process(delta):
-	player_falling(delta)
-	player_idle(delta)
-	player_move(delta)
-	player_jump(delta)
-	flip_projectile_position()
-	shoot(delta)
-	move_and_slide()
-	play_animations()
+	if(isDead == false):
+		player_falling(delta)
+		player_idle(delta)
+		player_move(delta)
+		player_jump(delta)
+		flip_projectile_position()
+		shoot(delta)
+		move_and_slide()
+		play_animations()
 
 
 
@@ -115,7 +120,16 @@ func movement_direction():
 	var direction = Input.get_axis("move_left", "move_right")
 	return direction
 
+func playerDeath():
+	var effectInstance = playerDeathEffect.instantiate() as Node2D
+	effectInstance.global_position = global_position
+	get_parent().add_child(effectInstance)
+	isDead = true
+	visible = false
 
 func _on_hitbox_body_entered(body : Node2D):
 	if body.is_in_group("Enemies"):
 		HealthManager.decrease_health(1)
+	if HealthManager.current_health == 0 and isDead == false:
+		playerDeath()
+		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dlvnd6bypaaj0"]
+[gd_scene load_steps=16 format=3 uid="uid://dlvnd6bypaaj0"]
 
 [ext_resource type="Script" path="res://Scripts/Camera/PanningCamera.gd" id="1_2jdt4"]
 [ext_resource type="Texture2D" uid="uid://56m1yvx6ds8l" path="res://Assets/Environment/layers/tilesets.png" id="2_a6ynw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b8s761wf4tueo" path="res://Assets/Environment/layers/background.png" id="4_4mdsm"]
 [ext_resource type="Texture2D" uid="uid://ck0kkmltaexkh" path="res://Assets/Environment/layers/middleground.png" id="5_h8uf3"]
 [ext_resource type="PackedScene" uid="uid://cmffcnux8ghl" path="res://Assets/Enemies/Crab/crab.tscn" id="6_6fjgx"]
+[ext_resource type="PackedScene" uid="uid://bp5we53whymet" path="res://Assets/UI/screen.tscn" id="10_m2gp3"]
 [ext_resource type="Script" path="res://Scripts/Trigger.gd" id="10_qj6l0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
@@ -1151,3 +1152,5 @@ script = ExtResource("10_qj6l0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
 position = Vector2(1385, 145)
 shape = SubResource("RectangleShape2D_m8jlm")
+
+[node name="Screen" parent="." instance=ExtResource("10_m2gp3")]
