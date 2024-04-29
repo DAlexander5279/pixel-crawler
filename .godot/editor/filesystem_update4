@@ -7,3 +7,4 @@ res://Assets/Enemies/Crab/crab.tscn
 res://Scenes/Levels/world_1.tscn
 res://Assets/player_assets/Animations/player_death_effect.tscn
 res://test_scene.tscn
+res://Assets/player_assets/playerhit.tres
