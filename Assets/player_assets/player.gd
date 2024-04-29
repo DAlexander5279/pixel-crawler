@@ -2,12 +2,16 @@ extends CharacterBody2D
 #reference to sprite
 @onready var player_sprite = $"AnimatedSprite2D"
 
-
+#all damange references and variables
 var playerDeathEffect = preload("res://Assets/player_assets/Animations/player_death_effect.tscn")
 var isDead = false
 @onready var invincibleTimer : Timer = $invicibilityTimer
 var isInvincible
 @onready var hurtbox : CollisionShape2D = $Hitbox/hitCollider
+@onready var flashPlayer : AnimationPlayer = $hitFlashPlayer
+
+
+
 #bullet reference
 @onready var bulletMarker : Marker2D = $FirePoint
 var projectile_spawn_point
@@ -141,6 +145,7 @@ func _on_hitbox_body_entered(body : Node2D):
 	if body.is_in_group("Enemies") and !isInvincible:
 		HealthManager.decrease_health(1)
 		if(HealthManager.current_health > 0):
+			flashPlayer.play("hitFlash")
 			isInvincible = true
 			hurtbox.disabled = true
 			invincibleTimer.start(1)
