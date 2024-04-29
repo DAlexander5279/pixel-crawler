@@ -5,6 +5,9 @@ extends CharacterBody2D
 
 var playerDeathEffect = preload("res://Assets/player_assets/Animations/player_death_effect.tscn")
 var isDead = false
+@onready var invincibleTimer : Timer = $invicibilityTimer
+var isInvincible
+@onready var hurtbox : CollisionShape2D = $Hitbox/hitCollider
 #bullet reference
 @onready var bulletMarker : Marker2D = $FirePoint
 var projectile_spawn_point
@@ -16,6 +19,8 @@ var PrimaryProjectile = preload("res://Assets/player_assets/projectiles/projecti
 @export var jumpForce : int = -30000
 @export var max_jumps : int = 1
 @export var current_jumps : int = 0
+
+
 
 
 
@@ -32,6 +37,7 @@ func _ready():
 
 #controls all physics processes
 func _physics_process(delta):
+	move_and_slide()
 	if(isDead == false):
 		player_falling(delta)
 		player_idle(delta)
@@ -39,7 +45,6 @@ func _physics_process(delta):
 		player_jump(delta)
 		flip_projectile_position()
 		shoot(delta)
-		move_and_slide()
 		play_animations()
 
 
@@ -103,7 +108,7 @@ func player_jump(delta):
 		current_jumps = current_jumps + 1
 		current_state = State.Jump
 	
-	
+#state machine for player animations
 func play_animations():
 	match current_state:
 		State.Idle:
@@ -117,19 +122,33 @@ func play_animations():
 			player_sprite.play("run_shooting")
 #returns variable based on input direction
 func movement_direction():
+	
 	var direction = Input.get_axis("move_left", "move_right")
 	return direction
-
+#disables physics processes and instantiates effect
 func playerDeath():
+	velocity.x = 0
+	velocity.y = 0
 	var effectInstance = playerDeathEffect.instantiate() as Node2D
 	effectInstance.global_position = global_position
 	get_parent().add_child(effectInstance)
 	isDead = true
 	visible = false
 
+
+#calls once player collides with body, check if body is enemy
 func _on_hitbox_body_entered(body : Node2D):
-	if body.is_in_group("Enemies"):
+	if body.is_in_group("Enemies") and !isInvincible:
 		HealthManager.decrease_health(1)
+		if(HealthManager.current_health > 0):
+			isInvincible = true
+			hurtbox.disabled = true
+			invincibleTimer.start(1)
 	if HealthManager.current_health == 0 and isDead == false:
 		playerDeath()
 		
+
+
+func _on_invicibility_timer_timeout():
+	hurtbox.disabled = false
+	isInvincible = false
