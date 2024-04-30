@@ -294,7 +294,7 @@ _data = {
 "hitFlash": SubResource("Animation_ymhgm")
 }
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["Player"]]
 collision_mask = 2
 script = ExtResource("1_olnh1")
 playerSpeed = 15000
