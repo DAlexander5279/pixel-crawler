@@ -1,4 +1,9 @@
-res://Scenes/Main Menu/main_menu.tscn
-res://Assets/player_assets/playerhit.tres
 res://Scenes/Levels/world_1.tscn
+res://Assets/player_assets/playerhit.tres
+res://Scenes/Main Menu/main_menu.tscn
 res://Scenes/Prefabs/door.tscn
+res://Scenes/Main Menu/main_menu.gd
+res://Scenes/settings_menu.tscn
+res://Scenes/Main Menu/settings_menu.gd
+res://Scenes/Main Menu/settings_tab_container.tscn
+res://Scenes/Main Menu/settings_menu.tscn
