@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt8etrp1gupav"]
+[gd_scene load_steps=6 format=3 uid="uid://dt8etrp1gupav"]
 
 [ext_resource type="Script" path="res://Scenes/Main Menu/main_menu.gd" id="1_5kt8l"]
 [ext_resource type="Texture2D" uid="uid://ccwhe7y6hx3wl" path="res://Assets/Menus/background_sprite_1.png" id="1_mj576"]
@@ -7,6 +7,9 @@
 font_names = PackedStringArray("Impact")
 
 [sub_resource type="SystemFont" id="SystemFont_jv4gl"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_0npd0"]
 font_names = PackedStringArray("Impact")
 
 [node name="Main_Menu" type="Control"]
@@ -84,3 +87,11 @@ layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_jv4gl")
 theme_override_font_sizes/font_size = 24
 text = "Exit Game"
+
+[node name="Settings" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_0npd0")
+theme_override_font_sizes/font_size = 24
+text = "Settings
+"
