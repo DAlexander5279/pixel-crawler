@@ -1,12 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt8etrp1gupav"]
+[gd_scene load_steps=8 format=3 uid="uid://dt8etrp1gupav"]
 
 [ext_resource type="Script" path="res://Scenes/Main Menu/main_menu.gd" id="1_5kt8l"]
 [ext_resource type="Texture2D" uid="uid://ccwhe7y6hx3wl" path="res://Assets/Menus/background_sprite_1.png" id="1_mj576"]
+[ext_resource type="PackedScene" uid="uid://dduax53p0lfsn" path="res://Scenes/Main Menu/settings_menu.tscn" id="3_5hcu2"]
+[ext_resource type="AudioStream" uid="uid://bv181yxapt1i7" path="res://Assets/Sounds/Music/kim-lightyear-leave-the-world-tonight-chiptune-edit-loop-132102.mp3" id="4_8lk5s"]
 
 [sub_resource type="SystemFont" id="SystemFont_oxq6m"]
 font_names = PackedStringArray("Impact")
 
 [sub_resource type="SystemFont" id="SystemFont_jv4gl"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_0npd0"]
 font_names = PackedStringArray("Impact")
 
 [node name="Main_Menu" type="Control"]
@@ -78,9 +83,27 @@ theme_override_fonts/font = SubResource("SystemFont_jv4gl")
 theme_override_font_sizes/font_size = 24
 text = "Start Game"
 
+[node name="Settings_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_0npd0")
+theme_override_font_sizes/font_size = 24
+text = "Settings
+"
+
 [node name="Exit_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_jv4gl")
 theme_override_font_sizes/font_size = 24
 text = "Exit Game"
+
+[node name="Settings_Menu" parent="." instance=ExtResource("3_5hcu2")]
+visible = false
+layout_mode = 1
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8lk5s")
+volume_db = -14.0
+autoplay = true
+bus = &"Music"
