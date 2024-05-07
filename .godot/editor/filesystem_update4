@@ -1,7 +1,2 @@
+res://Scenes/Levels/world_1.tscn
 res://Assets/player_assets/playerhit.tres
-res://Assets/Pickups/health_pickup.tscn
-res://Assets/player_assets/player.tscn
-res://Assets/Pickups/health_pickup.gd
-res://Scripts/healthManager.gd
-res://Assets/testing_assets/test_world.tscn
-res://Assets/Enemies/Crab/crab.tscn
