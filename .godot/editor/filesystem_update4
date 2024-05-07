@@ -1,7 +1,8 @@
+res://Scenes/Levels/world_1.tscn
 res://Assets/player_assets/playerhit.tres
-res://Assets/Pickups/health_pickup.tscn
-res://Assets/player_assets/player.tscn
-res://Assets/Pickups/health_pickup.gd
-res://Scripts/healthManager.gd
-res://Assets/testing_assets/test_world.tscn
-res://Assets/Enemies/Crab/crab.tscn
+res://Scenes/Main Menu/main_menu.tscn
+res://Scenes/Main Menu/settings_menu.tscn
+res://Scenes/Main Menu/settings_tab_container.tscn
+res://default_bus_layout.tres
+res://Scenes/Main Menu/audio_slider_settings.tscn
+res://Scenes/Main Menu/audio_slider_settings.gd
