@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715106949
+::res://::1715183187
 default_bus_layout.tres::AudioBusLayout::5236528704844178561::1715105967::0::1::::<><>::
 impactEffect.gd::GDScript::-1::1713902179::0::1::::<>AnimatedSprite2D<>::
 PlayerDeathEffect.gd::GDScript::-1::1714359884::0::1::::<>Node2D<>::
@@ -73,7 +73,7 @@ shot.png::CompressedTexture2D::353858614382539376::1713305712::1713305712::1::::
 ::res://Assets/Sounds/::1715108721
 ::res://Assets/Sounds/Music/::1715105967
 kim-lightyear-leave-the-world-tonight-chiptune-edit-loop-132102.mp3::AudioStreamMP3::3916111609211883104::1715105967::1715105967::1::::<><>::
-::res://Assets/Sounds/sfx/::1715109241
+::res://Assets/Sounds/sfx/::1715110144
 enemy_death.wav::AudioStreamWAV::1485283933670118029::1715108758::1715110144::1::::<><>::
 gun_shot.wav::AudioStreamWAV::2255188231771041276::1715108522::1715110144::1::::<><>::
 jump.wav::AudioStreamWAV::9111220285424929330::1715109064::1715110144::1::::<><>::

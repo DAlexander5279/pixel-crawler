@@ -2,6 +2,7 @@ extends AnimatedSprite2D
 
 var bulletEffect  = preload("res://Assets/player_assets/projectiles/impact_effect.tscn")
 
+
 var direction
 @export var speed = 600
 @export var damage = 1

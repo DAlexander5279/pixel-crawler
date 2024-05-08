@@ -1,15 +1,14 @@
+AudioStreamPlayer2D
+AudioStreamPlayer
 HSlider
 VSeparator
 Label
 HBoxContainer
 VBoxContainer
 ScrollContainer
-AudioStreamPlayer
 MarginContainer
 TabBar
 TabContainer
 Button
 AnimationPlayer
 Timer
-AnimatedSprite2D
-CanvasLayer
