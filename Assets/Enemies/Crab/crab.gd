@@ -8,6 +8,8 @@ var deathEffect = preload("res://Assets/Enemies/Animation/death_effect.tscn")
 @export var SPEED : int = 3000
 var direction : Vector2 = Vector2.LEFT 
 
+
+
 #raycast variables
 @onready var ledgeCheckleft = $LedgeCheckLeft
 @onready var ledgeCheckRight = $LedgeCheckRight

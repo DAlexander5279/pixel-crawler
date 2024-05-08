@@ -10,7 +10,11 @@ var isInvincible
 @onready var hurtbox : CollisionShape2D = $Hitbox/hitCollider
 @onready var flashPlayer : AnimationPlayer = $hitFlashPlayer
 
-
+#audio references
+@onready var gunSoundEff = $primaryGunSound
+@onready var jumpSound = $jumpSound
+@onready var deathSound = $deathSound
+@onready var hurtSound = $hurtSound
 
 #bullet reference
 @onready var bulletMarker : Marker2D = $FirePoint
@@ -68,6 +72,7 @@ func shoot(delta):
 	var direction = movement_direction()
 	if direction and Input.is_action_just_pressed("PrimaryFire"):
 		current_state = State.Shooting
+		gunSoundEff.play()
 		var primary_proj = PrimaryProjectile.instantiate() as Node2D
 		#adds bullet as a child to the level
 		primary_proj.global_position = bulletMarker.global_position
@@ -108,6 +113,7 @@ func player_jump(delta):
 		current_jumps = 0
 	
 	if Input.is_action_just_pressed("jump") and current_jumps < max_jumps:
+		jumpSound.play()
 		velocity.y = jumpForce * delta
 		current_jumps = current_jumps + 1
 		current_state = State.Jump
@@ -133,6 +139,7 @@ func movement_direction():
 func playerDeath():
 	velocity.x = 0
 	velocity.y = 0
+	deathSound.play()
 	var effectInstance = playerDeathEffect.instantiate() as Node2D
 	effectInstance.global_position = global_position
 	get_parent().add_child(effectInstance)
@@ -145,6 +152,7 @@ func _on_hitbox_body_entered(body : Node2D):
 	if body.is_in_group("Enemies") and !isInvincible:
 		HealthManager.decrease_health(1)
 		if(HealthManager.current_health > 0):
+			hurtSound.play()
 			flashPlayer.play("hitFlash")
 			isInvincible = true
 			hurtbox.disabled = true
