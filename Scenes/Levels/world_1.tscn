@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://dlvnd6bypaaj0"]
+[gd_scene load_steps=19 format=3 uid="uid://dlvnd6bypaaj0"]
 
 [ext_resource type="Script" path="res://Scripts/Camera/PanningCamera.gd" id="1_2jdt4"]
+[ext_resource type="Script" path="res://Scenes/Levels/world_1.gd" id="1_s2sib"]
 [ext_resource type="Texture2D" uid="uid://56m1yvx6ds8l" path="res://Assets/Environment/layers/tilesets.png" id="2_a6ynw"]
 [ext_resource type="Texture2D" uid="uid://cgiudmtsg4n3w" path="res://Assets/Environment/layers/walls.png" id="2_y0rfo"]
 [ext_resource type="PackedScene" uid="uid://b257cugvll81a" path="res://Assets/player_assets/player.tscn" id="3_he35d"]
@@ -11,6 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/Trigger.gd" id="10_qj6l0"]
 [ext_resource type="PackedScene" uid="uid://br1tdy8g6xnah" path="res://Scenes/Prefabs/door.tscn" id="10_s4uw4"]
 [ext_resource type="Script" path="res://Scenes/Prefabs/door.gd" id="11_grl82"]
+[ext_resource type="PackedScene" uid="uid://bxyhr7j7ttxwg" path="res://Scenes/Main Menu/pause_menu.tscn" id="12_yy0bp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
 texture = ExtResource("2_a6ynw")
@@ -1094,6 +1096,8 @@ sources/2 = SubResource("TileSetAtlasSource_xfjt7")
 size = Vector2(305, 92)
 
 [node name="World1" type="Node2D"]
+script = ExtResource("1_s2sib")
+pause_menu_packed_scene = ExtResource("12_yy0bp")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_o5ny6")

@@ -8,17 +8,16 @@ extends Control
 @onready var settings_menu = $Settings_Menu as SettingsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 
-
+#Main game preload
 @onready var start_level = preload("res://Scenes/Levels/world_1.tscn") as PackedScene
 
-#Pause Menu
-@export var pause_menu_packed_scene : PackedScene = null
 
 
 func _ready():
 	handle_signals()
 	
 
+#Main Menu
 func on_start_pressed() -> void:
 	get_tree().change_scene_to_packed(start_level)
 
@@ -40,3 +39,4 @@ func handle_signals() -> void:
 	settings_button.button_down.connect(on_settings_pressed)
 	exit_button.button_down.connect(on_exit_pressed)
 	settings_menu.exit_settings_menu.connect(on_exit_settings_menu)
+
