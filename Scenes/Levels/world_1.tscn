@@ -1164,5 +1164,7 @@ z_index = -3
 position = Vector2(1094, 75)
 script = ExtResource("11_grl82")
 
+[node name="UI_Container" type="CanvasLayer" parent="."]
+
 [connection signal="PlayerEntered" from="Trigger" to="Door" method="_on_trigger_player_entered"]
 [connection signal="PlayerEntered" from="Trigger" to="Door2" method="_on_trigger_player_entered"]

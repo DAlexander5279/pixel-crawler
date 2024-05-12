@@ -1,6 +1,7 @@
 class_name MainMenu
 extends Control
 
+#Main Menu
 @onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/Start_Button as Button
 @onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/Exit_Button as Button
 @onready var settings_button = $MarginContainer/HBoxContainer/VBoxContainer/Settings_Button as Button
@@ -9,6 +10,10 @@ extends Control
 
 
 @onready var start_level = preload("res://Scenes/Levels/world_1.tscn") as PackedScene
+
+#Pause Menu
+@export var pause_menu_packed_scene : PackedScene = null
+
 
 func _ready():
 	handle_signals()
