@@ -1,8 +1,7 @@
+res://Scenes/Prefabs/door.tscn
 res://Assets/player_assets/playerhit.tres
-res://Scenes/Main Menu/pause_menu.gd
-res://Scenes/Main Menu/pause_menu.tscn
 res://Assets/player_assets/player.tscn
 res://Scenes/Levels/world_1.tscn
-res://Scenes/Main Menu/main_menu.gd
-res://Scenes/Levels/world_1.gd
+res://Scenes/Main Menu/pause_menu.tscn
 res://Scenes/Main Menu/settings_menu.tscn
+res://Scenes/Prefabs/door.gd
