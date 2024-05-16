@@ -1,10 +1,11 @@
-[gd_scene load_steps=48 format=3 uid="uid://b257cugvll81a"]
+[gd_scene load_steps=52 format=3 uid="uid://b257cugvll81a"]
 
 [ext_resource type="Script" path="res://Assets/player_assets/player.gd" id="1_olnh1"]
 [ext_resource type="Texture2D" uid="uid://blesoe6jnrcm1" path="res://Assets/player_assets/Animations/player-idle.png" id="2_2cc7o"]
 [ext_resource type="Texture2D" uid="uid://ckbx5c0lo00rs" path="res://Assets/player_assets/Animations/player-jump.png" id="3_1tjej"]
 [ext_resource type="Texture2D" uid="uid://c345eeobrpx1t" path="res://Assets/player_assets/Animations/player-run.png" id="3_nxesh"]
 [ext_resource type="Texture2D" uid="uid://cmyc8khq4h8gp" path="res://Assets/player_assets/Animations/player-run-shoot.png" id="4_cb66u"]
+[ext_resource type="Texture2D" uid="uid://ctkqrir5y3fgn" path="res://Assets/player_assets/Animations/player-stand.png" id="6_guyuh"]
 [ext_resource type="AudioStream" uid="uid://7eovdrut50fo" path="res://Assets/Sounds/sfx/gun_shot.wav" id="7_dub45"]
 [ext_resource type="AudioStream" uid="uid://d22sp41ob7h3o" path="res://Assets/Sounds/sfx/jump.wav" id="8_gq7ue"]
 [ext_resource type="AudioStream" uid="uid://bmy3orjmcc2ga" path="res://Assets/Sounds/sfx/player_death.wav" id="9_wr8oq"]
@@ -85,8 +86,8 @@ void fragment() {
 shader = SubResource("Shader_o5urw")
 shader_parameter/enabled = false
 shader_parameter/flash = Color(1, 1, 1, 1)
-shader_parameter/line_color = Color(1, 1, 1, 1)
-shader_parameter/line_thickness = 1.0
+shader_parameter/line_color = Color(0, 0.756863, 0.737255, 1)
+shader_parameter/line_thickness = 0.559
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ky12m"]
 atlas = ExtResource("2_2cc7o")
@@ -208,6 +209,18 @@ region = Rect2(640, 0, 80, 80)
 atlas = ExtResource("3_nxesh")
 region = Rect2(720, 0, 80, 80)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_imftj"]
+atlas = ExtResource("6_guyuh")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbpbu"]
+atlas = ExtResource("6_guyuh")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwmyi"]
+atlas = ExtResource("6_guyuh")
+region = Rect2(160, 0, 80, 80)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_u5js3"]
 animations = [{
 "frames": [],
@@ -324,6 +337,20 @@ animations = [{
 "loop": true,
 "name": &"running",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imftj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbpbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwmyi")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
 }]
 
 [sub_resource type="Animation" id="Animation_eae2b"]
@@ -387,10 +414,11 @@ debug_color = Color(0.913725, 0.188235, 0.564706, 0.419608)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_iqlxu")
-position = Vector2(-1, -104)
+position = Vector2(-2, -107)
 scale = Vector2(4.39688, 4.34688)
 sprite_frames = SubResource("SpriteFrames_u5js3")
-animation = &"running"
+animation = &"shoot"
+frame_progress = 0.161824
 
 [node name="invicibilityTimer" type="Timer" parent="."]
 
@@ -415,5 +443,10 @@ bus = &"Sfx"
 stream = ExtResource("10_puyan")
 bus = &"Sfx"
 
+[node name="shootTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="timeout" from="invicibilityTimer" to="." method="_on_invicibility_timer_timeout"]
+[connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]

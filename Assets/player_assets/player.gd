@@ -9,7 +9,8 @@ var isDead = false
 var isInvincible
 @onready var hurtbox : CollisionShape2D = $Hitbox/hitCollider
 @onready var flashPlayer : AnimationPlayer = $hitFlashPlayer
-
+var isShooting = false
+@onready var shootTimer : Timer = $shootTimer
 #audio references
 @onready var gunSoundEff = $primaryGunSound
 @onready var jumpSound = $jumpSound
@@ -29,11 +30,11 @@ var PrimaryProjectile = preload("res://Assets/player_assets/projectiles/projecti
 @export var current_jumps : int = 0
 
 
-
+var lastDirection = 1
 
 
 #State machine variables
-enum State{Idle, Running, Jump, Shooting}
+enum State{Idle, Running, Jump, Shooting, StandShooting}
 var current_state : State 
 
 #calls on start
@@ -65,8 +66,10 @@ func flip_projectile_position():
 	var direction = movement_direction()
 	if direction > 0:
 		bulletMarker.position.x = projectile_spawn_point.x
-	else:
+		lastDirection = 1
+	elif direction < 0:
 		bulletMarker.position.x = -projectile_spawn_point.x
+		lastDirection = -1
 
 func shoot(delta):
 	var direction = movement_direction()
@@ -79,6 +82,18 @@ func shoot(delta):
 		primary_proj.direction = direction
 		get_parent().add_child(primary_proj)
 		
+	if direction == 0 and Input.is_action_just_pressed("PrimaryFire") and is_on_floor():
+		isShooting = true
+		shootTimer.start()
+		current_state = State.StandShooting
+		gunSoundEff.play()
+		var primary_proj = PrimaryProjectile.instantiate() as Node2D
+		#adds bullet as a child to the level
+		primary_proj.global_position = bulletMarker.global_position
+		primary_proj.direction = lastDirection
+		get_parent().add_child(primary_proj)
+		
+		
 		
 
 #pushes player down by a force
@@ -87,7 +102,7 @@ func player_falling(delta):
 		velocity.y += gravityForce * delta
 		
 func player_idle(delta):
-	if is_on_floor():
+	if is_on_floor() and !isShooting:
 		current_state = State.Idle
 #moves player based on input direction
 func player_move(delta):
@@ -130,6 +145,9 @@ func play_animations():
 			player_sprite.play("jump")
 		State.Shooting:
 			player_sprite.play("run_shooting")
+		State.StandShooting:
+			player_sprite.play("shoot")
+			
 #returns variable based on input direction
 func movement_direction():
 	
@@ -165,3 +183,7 @@ func _on_hitbox_body_entered(body : Node2D):
 func _on_invicibility_timer_timeout():
 	hurtbox.disabled = false
 	isInvincible = false
+
+
+func _on_shoot_timer_timeout():
+	isShooting = false # Replace with function body.

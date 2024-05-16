@@ -1,4 +1,7 @@
 res://Assets/player_assets/player.tscn
 res://Assets/player_assets/playerhit.tres
+res://Assets/player_assets/player.gd
 res://Assets/testing_assets/test_world.tscn
 res://Assets/Pickups/health_pickup.tscn
+res://Assets/Enemies/Crab/crab.tscn
+res://Assets/Enemies/Crab/crab.gdshader
