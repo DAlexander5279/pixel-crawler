@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dr22ronmfngpu"]
+[gd_scene load_steps=4 format=3 uid="uid://dr22ronmfngpu"]
 
 [ext_resource type="PackedScene" uid="uid://v8im5hm80m5w" path="res://Scenes/Main Menu/audio_slider_settings.tscn" id="1_kaj21"]
+[ext_resource type="PackedScene" uid="uid://cteb2p0e2v6x2" path="res://Scenes/Main Menu/window_mode_button.tscn" id="2_re7mu"]
+[ext_resource type="PackedScene" uid="uid://cl7sylkxmnhqm" path="res://Scenes/Main Menu/resolution_mode_button.tscn" id="3_11a71"]
 
 [node name="Settings_Tab_Container" type="Control"]
 layout_mode = 3
@@ -60,3 +62,76 @@ bus_name = "Music"
 [node name="Audio_Slider_Settings3" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_kaj21")]
 layout_mode = 2
 bus_name = "Sfx"
+
+[node name="Graphics" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Graphics"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 32.0
+offset_right = 914.0
+offset_bottom = 459.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Graphics/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 128
+
+[node name="Window_Mode_Button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_re7mu")]
+layout_mode = 2
+
+[node name="Resolution_Mode_Button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_11a71")]
+layout_mode = 2
+
+[node name="Key Binds" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Key Binds"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 32.0
+offset_right = 914.0
+offset_bottom = 459.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="TBD" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/TBD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 32.0
+offset_right = 914.0
+offset_bottom = 459.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24

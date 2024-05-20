@@ -1,3 +1,4 @@
+res://Scenes/Main Menu
 res://Assets/player_assets
 res://Assets/player_assets/Animations
 res://Assets/Pickups
@@ -7,4 +8,3 @@ res://
 res://Assets/Enemies/Animation
 res://Assets/Enemies/Crab
 res://Assets/player_assets/projectiles
-res://Scenes/Main Menu
