@@ -1,8 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://cmffcnux8ghl"]
+[gd_scene load_steps=17 format=3 uid="uid://cmffcnux8ghl"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/Crab/crab.gd" id="1_eqfti"]
 [ext_resource type="Texture2D" uid="uid://dojy3oui4dbqc" path="res://Assets/Enemies/Crab/crab-idle.png" id="1_fs6xj"]
+[ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="2_bcnw6"]
 [ext_resource type="Texture2D" uid="uid://sqb53spav5l" path="res://Assets/Enemies/Crab/crab-walk.png" id="2_wnyt7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f6akx"]
+shader = ExtResource("2_bcnw6")
+shader_parameter/enabled = false
+shader_parameter/flash = Color(1, 1, 1, 1)
+shader_parameter/line_color = Color(0.913725, 0.247059, 0.403922, 1)
+shader_parameter/line_thickness = 1.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lom0n"]
 atlas = ExtResource("1_fs6xj")
@@ -87,12 +95,12 @@ collision_mask = 2
 script = ExtResource("1_eqfti")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_f6akx")
 position = Vector2(0.520834, -1.90735e-06)
 scale = Vector2(1, 0.96875)
 sprite_frames = SubResource("SpriteFrames_h8r36")
-animation = &"Idle"
+animation = &"walk"
 autoplay = "Idle"
-frame_progress = 0.86785
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8.85417)

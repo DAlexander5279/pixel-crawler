@@ -1,7 +1,10 @@
-res://Assets/player_assets/player.tscn
-res://Assets/player_assets/playerhit.tres
-res://Assets/player_assets/player.gd
-res://Assets/testing_assets/test_world.tscn
-res://Assets/Pickups/health_pickup.tscn
 res://Assets/Enemies/Crab/crab.tscn
 res://Assets/Enemies/Crab/crab.gdshader
+res://Assets/player_assets/playerhit.tres
+res://Assets/Enemies/Crab-Boss/crab-boss.tscn
+res://Scenes/Levels/world_1.tscn
+res://Assets/player_assets/player.tscn
+res://Assets/testing_assets/test_world.tscn
+res://Assets/Pickups/health_pickup.tscn
+res://Assets/Enemies/Sentinel/sentinel.tscn
+res://Assets/Enemies/Sentinel/crab.gd
