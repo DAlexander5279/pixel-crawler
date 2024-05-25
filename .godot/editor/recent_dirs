@@ -1,4 +1,5 @@
-res://Scenes/Main Menu
+res://Assets/Enemies/Sentinel
+res://Assets/Enemies/Crab-Boss
 res://Assets/player_assets
 res://Assets/player_assets/Animations
 res://Assets/Pickups
@@ -8,3 +9,4 @@ res://
 res://Assets/Enemies/Animation
 res://Assets/Enemies/Crab
 res://Assets/player_assets/projectiles
+res://Scenes/Main Menu

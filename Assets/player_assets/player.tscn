@@ -86,8 +86,8 @@ void fragment() {
 shader = SubResource("Shader_o5urw")
 shader_parameter/enabled = false
 shader_parameter/flash = Color(1, 1, 1, 1)
-shader_parameter/line_color = Color(0, 0.756863, 0.737255, 1)
-shader_parameter/line_thickness = 0.559
+shader_parameter/line_color = Color(0.0588235, 0.756863, 0.729412, 1)
+shader_parameter/line_thickness = 0.839
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ky12m"]
 atlas = ExtResource("2_2cc7o")
