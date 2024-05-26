@@ -1,0 +1,160 @@
+[gd_scene load_steps=21 format=3 uid="uid://c5pjy4i15jhos"]
+
+[ext_resource type="Script" path="res://Assets/Enemies/Crab/crab.gd" id="1_8nkvj"]
+[ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="2_jh05l"]
+[ext_resource type="Texture2D" uid="uid://dfiaqry0qsa3l" path="res://Assets/Enemies/Sentinel/sentinel-sheet.png" id="3_8x3cd"]
+[ext_resource type="Texture2D" uid="uid://c6s6tm63iem2i" path="res://Assets/Enemies/Crab-Boss/crab.png" id="3_p1ssq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f6akx"]
+shader = ExtResource("2_jh05l")
+shader_parameter/enabled = false
+shader_parameter/flash = Color(1, 1, 1, 1)
+shader_parameter/line_color = Color(0.913725, 0.247059, 0.403922, 1)
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12dcw"]
+atlas = ExtResource("3_8x3cd")
+region = Rect2(0, 0, 37, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjjrv"]
+atlas = ExtResource("3_8x3cd")
+region = Rect2(37, 0, 37, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfrqt"]
+atlas = ExtResource("3_8x3cd")
+region = Rect2(74, 0, 37, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1068"]
+atlas = ExtResource("3_8x3cd")
+region = Rect2(111, 0, 37, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2celj"]
+atlas = ExtResource("3_8x3cd")
+region = Rect2(148, 0, 37, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwlxc"]
+atlas = ExtResource("3_8x3cd")
+region = Rect2(185, 0, 37, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckvj6"]
+atlas = ExtResource("3_p1ssq")
+region = Rect2(0, 0, 64, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhh36"]
+atlas = ExtResource("3_p1ssq")
+region = Rect2(64, 0, 64, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iqos"]
+atlas = ExtResource("3_p1ssq")
+region = Rect2(128, 0, 64, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvc5n"]
+atlas = ExtResource("3_p1ssq")
+region = Rect2(192, 0, 64, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghugf"]
+atlas = ExtResource("3_p1ssq")
+region = Rect2(256, 0, 64, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad840"]
+atlas = ExtResource("3_p1ssq")
+region = Rect2(320, 0, 64, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h8r36"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12dcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjjrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfrqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1068")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2celj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwlxc")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckvj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhh36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iqos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvc5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghugf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad840")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbp3k"]
+size = Vector2(19.987, 4.79169)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6nf1"]
+radius = 9.38946
+
+[node name="Crab" type="CharacterBody2D" groups=["Enemies"]]
+position = Vector2(3.55271e-15, -24)
+scale = Vector2(1.92, 1.92)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_8nkvj")
+health = 50
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_f6akx")
+position = Vector2(1.19209e-07, 1.5625)
+scale = Vector2(-0.53, 0.514)
+sprite_frames = SubResource("SpriteFrames_h8r36")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.35729
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.47035e-07, 9.89583)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_jbp3k")
+
+[node name="LedgeCheckLeft" type="RayCast2D" parent="."]
+position = Vector2(9.375, 11.9792)
+target_position = Vector2(0, 4)
+collision_mask = 2
+
+[node name="LedgeCheckRight" type="RayCast2D" parent="."]
+position = Vector2(-9.37497, 11.4584)
+target_position = Vector2(-9.53674e-07, 5.20833)
+collision_mask = 2
+
+[node name="Hitbox" type="Area2D" parent="."]
+position = Vector2(-46.875, 23.9583)
+scale = Vector2(1.12687, 1.13674)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(41.1066, -21.4176)
+shape = SubResource("CircleShape2D_l6nf1")
+debug_color = Color(0.952941, 0, 0.54902, 0.419608)
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
