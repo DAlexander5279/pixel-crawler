@@ -125,12 +125,12 @@ func player_move(delta):
 #pushes a force upwarard if conditions are met
 func player_jump(delta):
 	if is_on_floor():
-		current_jumps = 0
+		HealthManager.currentJumps = 0
 	
-	if Input.is_action_just_pressed("jump") and current_jumps < max_jumps:
+	if Input.is_action_just_pressed("jump") and HealthManager.currentJumps < HealthManager.max_jumps:
 		jumpSound.play()
 		velocity.y = jumpForce * delta
-		current_jumps = current_jumps + 1
+		HealthManager.currentJumps = HealthManager.currentJumps + 1
 		current_state = State.Jump
 	
 #state machine for player animations

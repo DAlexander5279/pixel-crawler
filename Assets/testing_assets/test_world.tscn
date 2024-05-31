@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://e2xpnn7wb57o"]
+[gd_scene load_steps=14 format=3 uid="uid://e2xpnn7wb57o"]
 
 [ext_resource type="Texture2D" uid="uid://56m1yvx6ds8l" path="res://Assets/Environment/layers/tilesets.png" id="1_14574"]
 [ext_resource type="PackedScene" uid="uid://b257cugvll81a" path="res://Assets/player_assets/player.tscn" id="2_0oan7"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://8bxinb3bh5w6" path="res://Assets/Pickups/health_pickup.tscn" id="8_061x7"]
 [ext_resource type="PackedScene" uid="uid://cgfqxe6vh6aq8" path="res://Assets/Enemies/Crab-Boss/crab-boss.tscn" id="9_xq3hb"]
 [ext_resource type="PackedScene" uid="uid://c5pjy4i15jhos" path="res://Assets/Enemies/Sentinel/sentinel.tscn" id="10_jacm5"]
+[ext_resource type="PackedScene" uid="uid://fm0dg8xq7uab" path="res://Assets/Pickups/DoubleJump.tscn" id="11_r2fxl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
 texture = ExtResource("1_14574")
@@ -444,3 +445,6 @@ position = Vector2(890, 159)
 
 [node name="Crab2" parent="." instance=ExtResource("10_jacm5")]
 position = Vector2(578, 161)
+
+[node name="HealthPickup2" parent="." instance=ExtResource("11_r2fxl")]
+position = Vector2(152, 179)
