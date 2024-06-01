@@ -18,6 +18,8 @@ var direction : Vector2 = Vector2.LEFT
 #Health and damage
 @export var health = 5
 
+signal boss_died
+
 enum State {Idle, Walk}
 var current_state : State
 
@@ -64,4 +66,5 @@ func _on_hitbox_area_entered(area : Area2D):
 			var deatheffectInstance = deathEffect.instantiate() as Node2D
 			deatheffectInstance.global_position = global_position 
 			get_parent().add_child(deatheffectInstance)
+			emit_signal("boss_died") #emit the death signal when boss dies
 			queue_free()

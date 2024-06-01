@@ -1,10 +1,9 @@
 res://Scenes/Levels/world_1.tscn
 res://Assets/Enemies/Crab/crab.gdshader
 res://Assets/player_assets/playerhit.tres
-res://Scripts/Trigger.gd
+res://Assets/Enemies/Crab-Boss/crab.gd
+res://Scenes/Prefabs/door.gd
 res://Scenes/Main Menu/main_menu.tscn
-res://Scenes/Main Menu/settings_menu.tscn
-res://Scenes/Main Menu/settings_tab_container.tscn
-res://Scenes/Main Menu/options_display_button.tscn
-res://Scenes/Main Menu/window_mode_button.tscn
-res://Scenes/Main Menu/resolution_mode_button.tscn
+res://Scenes/Prefabs/door.tscn
+res://Assets/Enemies/Crab/crab.gd
+res://Scripts/Trigger.gd
