@@ -10,7 +10,7 @@ var triggered = false
 func _on_area_2d_body_entered(body : Node2D):
 	if body.is_in_group("Player") and triggered == false:
 		triggered = true
-		HealthManager.add_Health(1)
+		HealthManager.activateDoubleJump()
 		collider.disabled = true
 		sprite.visible = false
 		soundEff.play()

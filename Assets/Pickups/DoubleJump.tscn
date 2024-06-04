@@ -1,23 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://8bxinb3bh5w6"]
+[gd_scene load_steps=7 format=3 uid="uid://fm0dg8xq7uab"]
 
-[ext_resource type="Texture2D" uid="uid://dxjwejwpafc15" path="res://Assets/Pickups/health-red 32px.png" id="1_2jvxg"]
-[ext_resource type="Script" path="res://Assets/Pickups/health_pickup.gd" id="1_q1onf"]
-[ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="2_3ofpf"]
-[ext_resource type="AudioStream" uid="uid://dtulrlh5wnh72" path="res://Assets/Sounds/sfx/powerUp.wav" id="3_svr6m"]
+[ext_resource type="Script" path="res://Assets/Pickups/health_pickup.gd" id="1_wey2m"]
+[ext_resource type="Texture2D" uid="uid://b8dtwjhjl6k1u" path="res://Assets/Pickups/doubleJump.png" id="2_0s0ul"]
+[ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="2_1ey4v"]
+[ext_resource type="AudioStream" uid="uid://dtulrlh5wnh72" path="res://Assets/Sounds/sfx/powerUp.wav" id="3_81qxx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nvo5k"]
 radius = 36.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qwfw0"]
-shader = ExtResource("2_3ofpf")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sht5b"]
+shader = ExtResource("2_1ey4v")
 shader_parameter/enabled = false
 shader_parameter/flash = Color(1, 1, 1, 1)
 shader_parameter/line_color = Color(0, 1, 0, 1)
-shader_parameter/line_thickness = 1.134
+shader_parameter/line_thickness = 5.575
 
 [node name="HealthPickup" type="Node2D"]
 scale = Vector2(0.296942, 0.296942)
-script = ExtResource("1_q1onf")
+script = ExtResource("1_wey2m")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(3.36766, 37.0442)
@@ -27,13 +27,13 @@ position = Vector2(-4, -42)
 shape = SubResource("CircleShape2D_nvo5k")
 
 [node name="Health-red32Px" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_qwfw0")
-position = Vector2(0, -3.36766)
-scale = Vector2(2.40625, 2.40625)
-texture = ExtResource("1_2jvxg")
+material = SubResource("ShaderMaterial_sht5b")
+position = Vector2(20.206, 10.103)
+scale = Vector2(0.392585, 0.392585)
+texture = ExtResource("2_0s0ul")
 
 [node name="powerUpSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_svr6m")
+stream = ExtResource("3_81qxx")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="finished" from="powerUpSound" to="." method="_on_power_up_sound_finished"]

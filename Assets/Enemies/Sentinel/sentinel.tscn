@@ -9,8 +9,8 @@
 shader = ExtResource("2_jh05l")
 shader_parameter/enabled = false
 shader_parameter/flash = Color(1, 1, 1, 1)
-shader_parameter/line_color = Color(0.913725, 0.247059, 0.403922, 1)
-shader_parameter/line_thickness = 1.0
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 0.93
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12dcw"]
 atlas = ExtResource("3_8x3cd")
@@ -134,7 +134,6 @@ frame_progress = 0.35729
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4.47035e-07, 9.89583)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jbp3k")
 
 [node name="LedgeCheckLeft" type="RayCast2D" parent="."]
