@@ -1,16 +1,10 @@
-res://Scenes/Levels/world_1.tscn
+res://Assets/Pickups/health_pickup.tscn
 res://Assets/Enemies/Crab/crab.gdshader
 res://Assets/player_assets/playerhit.tres
-res://Scenes/Main Menu/main_menu.tscn
-res://Scenes/Main Menu/settings_menu.tscn
-res://Scenes/Main Menu/settings_tab_container.tscn
-res://Scenes/Main Menu/options_display_button.tscn
-res://Scenes/Main Menu/window_mode_button.tscn
-res://Scenes/Main Menu/resolution_mode_button.tscn
 res://Assets/Pickups/DoubleJump.tscn
+res://Assets/Enemies/Crab-Boss/crab-boss.tscn
+res://Assets/Enemies/Crab/crab.tscn
+res://Scenes/Levels/world_1.tscn
 res://Assets/player_assets/player.tscn
-res://Scripts/healthManager.gd
-res://Assets/player_assets/player.gd
-res://Assets/Pickups/health_pickup.tscn
-res://Assets/Pickups/health_pickup.gd
 res://Assets/testing_assets/test_world.tscn
+res://Assets/Enemies/Sentinel/sentinel.tscn

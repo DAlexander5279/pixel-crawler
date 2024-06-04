@@ -1,11 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://fm0dg8xq7uab"]
+[gd_scene load_steps=7 format=3 uid="uid://fm0dg8xq7uab"]
 
 [ext_resource type="Script" path="res://Assets/Pickups/health_pickup.gd" id="1_wey2m"]
 [ext_resource type="Texture2D" uid="uid://b8dtwjhjl6k1u" path="res://Assets/Pickups/doubleJump.png" id="2_0s0ul"]
+[ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="2_1ey4v"]
 [ext_resource type="AudioStream" uid="uid://dtulrlh5wnh72" path="res://Assets/Sounds/sfx/powerUp.wav" id="3_81qxx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nvo5k"]
 radius = 36.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sht5b"]
+shader = ExtResource("2_1ey4v")
+shader_parameter/enabled = false
+shader_parameter/flash = Color(1, 1, 1, 1)
+shader_parameter/line_color = Color(0, 1, 0, 1)
+shader_parameter/line_thickness = 5.575
 
 [node name="HealthPickup" type="Node2D"]
 scale = Vector2(0.296942, 0.296942)
@@ -19,6 +27,7 @@ position = Vector2(-4, -42)
 shape = SubResource("CircleShape2D_nvo5k")
 
 [node name="Health-red32Px" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_sht5b")
 position = Vector2(20.206, 10.103)
 scale = Vector2(0.392585, 0.392585)
 texture = ExtResource("2_0s0ul")
