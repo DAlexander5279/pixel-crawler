@@ -64,7 +64,7 @@ script = ExtResource("1_71jkg")
 material = SubResource("ShaderMaterial_6ykqh")
 sprite_frames = SubResource("SpriteFrames_3chnd")
 autoplay = "default"
-frame_progress = 0.84383
+frame_progress = 0.016268
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemies"]]
 collision_layer = 4

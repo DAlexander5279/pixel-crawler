@@ -102,20 +102,23 @@ radius = 9.38946
 
 [node name="Crab-Boss" type="CharacterBody2D" groups=["Enemies"]]
 position = Vector2(5.96046e-08, -34)
-scale = Vector2(1.92, 1.92)
+scale = Vector2(1.518, 1.518)
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_lp55m")
 health = 20
+
+[node name="FirePoint" type="Marker2D" parent="."]
+position = Vector2(-20.5084, -9.65101)
+scale = Vector2(1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_f6akx")
 position = Vector2(-2.60417, -4.16667)
 scale = Vector2(1, 0.96875)
 sprite_frames = SubResource("SpriteFrames_h8r36")
-animation = &"walk"
+animation = &"idle"
 autoplay = "walk"
-frame_progress = 0.95082
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.04167, 15.1042)
@@ -148,6 +151,9 @@ one_shot = true
 [node name="bufferTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="bulletCooldown" type="Timer" parent="."]
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="timeout" from="pauseTimer" to="." method="_on_pause_timer_timeout"]
 [connection signal="timeout" from="bufferTimer" to="." method="_on_buffer_timer_timeout"]
+[connection signal="timeout" from="bulletCooldown" to="." method="_on_bullet_cooldown_timeout"]

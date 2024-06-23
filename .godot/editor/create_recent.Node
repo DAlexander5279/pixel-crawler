@@ -1,7 +1,8 @@
+Timer
+Marker2D
 CollisionShape2D
 Area2D
 AnimatedSprite2D
-Timer
 AudioStreamPlayer
 VBoxContainer
 ScrollContainer
@@ -11,5 +12,3 @@ VSeparator
 Label
 HBoxContainer
 TabBar
-AudioStreamPlayer2D
-HSlider

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b8s761wf4tueo" path="res://Assets/Environment/layers/background.png" id="4_xsakf"]
 [ext_resource type="Texture2D" uid="uid://ck0kkmltaexkh" path="res://Assets/Environment/layers/middleground.png" id="5_jg6vx"]
 [ext_resource type="PackedScene" uid="uid://bp5we53whymet" path="res://Assets/UI/screen.tscn" id="7_c3gw6"]
-[ext_resource type="PackedScene" uid="uid://bta2uixc5kg5s" path="res://Assets/Enemies/Crab-Boss/bolt.tscn" id="10_dc5d3"]
+[ext_resource type="PackedScene" uid="uid://cgfqxe6vh6aq8" path="res://Assets/Enemies/Crab-Boss/crab-boss.tscn" id="9_xq3hb"]
 [ext_resource type="PackedScene" uid="uid://c5pjy4i15jhos" path="res://Assets/Enemies/Sentinel/sentinel.tscn" id="10_jacm5"]
 [ext_resource type="PackedScene" uid="uid://fm0dg8xq7uab" path="res://Assets/Pickups/DoubleJump.tscn" id="11_r2fxl"]
 
@@ -394,7 +394,7 @@ layer_2/tile_data = PackedInt32Array()
 
 [node name="player" parent="." instance=ExtResource("2_0oan7")]
 z_index = 1
-position = Vector2(947, 193)
+position = Vector2(913, 188)
 scale = Vector2(0.3, 0.3)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -432,10 +432,10 @@ stretch_mode = 1
 [node name="Screen" parent="." instance=ExtResource("7_c3gw6")]
 
 [node name="Crab2" parent="." instance=ExtResource("10_jacm5")]
-position = Vector2(111, 170)
+position = Vector2(11, 179)
 
 [node name="HealthPickup2" parent="." instance=ExtResource("11_r2fxl")]
 position = Vector2(152, 179)
 
-[node name="Bolt" parent="." instance=ExtResource("10_dc5d3")]
-position = Vector2(249, 177)
+[node name="Crab-Boss" parent="." instance=ExtResource("9_xq3hb")]
+position = Vector2(816, 169)
