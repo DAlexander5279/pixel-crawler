@@ -11,3 +11,4 @@ res://Assets/player_assets/player.gd
 res://Assets/player_assets/player.tscn
 res://Assets/Enemies/Sentinel/sentinel.tscn
 res://Assets/Enemies/Crab-Boss/crab.gd
+res://Assets/UI/screen.tscn

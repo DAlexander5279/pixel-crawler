@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dlvnd6bypaaj0"]
+[gd_scene load_steps=23 format=3 uid="uid://dlvnd6bypaaj0"]
 
 [ext_resource type="Script" path="res://Scripts/Camera/PanningCamera.gd" id="1_2jdt4"]
 [ext_resource type="Script" path="res://Scenes/Levels/world_1.gd" id="1_s2sib"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cgfqxe6vh6aq8" path="res://Assets/Enemies/Crab-Boss/crab-boss.tscn" id="14_lovb8"]
 [ext_resource type="AudioStream" uid="uid://cmf0tn02btlwc" path="res://Assets/Sounds/Music/Warped Caves.ogg" id="15_u42pq"]
 [ext_resource type="AudioStream" uid="uid://d3ah3s8oij6tr" path="res://Assets/Sounds/Music/warped-shooting-fx.ogg" id="16_c1n1a"]
+[ext_resource type="PackedScene" uid="uid://bp5we53whymet" path="res://Assets/UI/screen.tscn" id="17_eq2vq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
 texture = ExtResource("2_a6ynw")
@@ -1127,7 +1128,7 @@ scale = Vector2(0.3, 0.3)
 collision_mask = 10
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(480, -50)
+position = Vector2(20, -110)
 zoom = Vector2(2, 2)
 limit_left = -100000
 limit_top = -100000
@@ -1190,6 +1191,8 @@ bus = &"Music"
 stream = ExtResource("16_c1n1a")
 volume_db = -20.0
 bus = &"Music"
+
+[node name="Screen" parent="." instance=ExtResource("17_eq2vq")]
 
 [connection signal="PlayerEntered" from="Trigger" to="Door" method="_on_trigger_player_entered"]
 [connection signal="PlayerEntered" from="Trigger" to="Door2" method="_on_trigger_player_entered"]
