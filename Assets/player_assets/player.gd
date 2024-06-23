@@ -178,6 +178,17 @@ func _on_hitbox_body_entered(body : Node2D):
 	if HealthManager.current_health == 0 and isDead == false:
 		playerDeath()
 		
+func _on_hitbox_area_entered(area):
+	if area.is_in_group("Enemies") and !isInvincible:
+		HealthManager.decrease_health(1)
+		if(HealthManager.current_health > 0):
+			hurtSound.play()
+			flashPlayer.play("hitFlash")
+			isInvincible = true
+			hurtbox.disabled = true
+			invincibleTimer.start(1)
+	if HealthManager.current_health == 0 and isDead == false:
+		playerDeath()
 
 
 func _on_invicibility_timer_timeout():
@@ -187,3 +198,5 @@ func _on_invicibility_timer_timeout():
 
 func _on_shoot_timer_timeout():
 	isShooting = false # Replace with function body.
+
+

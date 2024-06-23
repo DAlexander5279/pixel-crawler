@@ -12,13 +12,18 @@ func _physics_process(delta):
 
 
 
-func _on_hitbox_area_entered(area):
+
+func _on_area_2d_area_entered(area):
+	impact()
+
+func _on_area_2d_body_entered(body):
 	impact()
 
 
-func _on_hitbox_body_entered(body):
-	impact()
 	
 
 func impact():
 	queue_free()
+
+
+
