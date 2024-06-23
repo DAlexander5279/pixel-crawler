@@ -1,3 +1,5 @@
+AnimatedSprite2D
+Timer
 AudioStreamPlayer
 VBoxContainer
 ScrollContainer
@@ -7,7 +9,6 @@ VSeparator
 Label
 HBoxContainer
 TabBar
-Timer
 AudioStreamPlayer2D
 HSlider
 TabContainer
