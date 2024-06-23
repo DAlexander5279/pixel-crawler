@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 AnimatedSprite2D
 Timer
 AudioStreamPlayer
@@ -11,5 +13,3 @@ HBoxContainer
 TabBar
 AudioStreamPlayer2D
 HSlider
-TabContainer
-Button
