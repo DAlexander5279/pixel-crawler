@@ -447,6 +447,7 @@ bus = &"Sfx"
 wait_time = 0.5
 one_shot = true
 
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="timeout" from="invicibilityTimer" to="." method="_on_invicibility_timer_timeout"]
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
