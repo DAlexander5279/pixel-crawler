@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cgfqxe6vh6aq8"]
+[gd_scene load_steps=20 format=3 uid="uid://cgfqxe6vh6aq8"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/Crab-Boss/crab.gd" id="1_lp55m"]
 [ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="2_80xeg"]
@@ -10,6 +10,14 @@ shader_parameter/enabled = false
 shader_parameter/flash = Color(1, 1, 1, 1)
 shader_parameter/line_color = Color(0, 0, 0, 1)
 shader_parameter/line_thickness = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtors"]
+atlas = ExtResource("3_wiasy")
+region = Rect2(128, 0, 64, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b8jx"]
+atlas = ExtResource("3_wiasy")
+region = Rect2(320, 0, 64, 46)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhh36"]
 atlas = ExtResource("3_wiasy")
@@ -53,6 +61,17 @@ region = Rect2(320, 0, 64, 46)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h8r36"]
 animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_qtors")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b8jx")
+}],
+"loop": true,
+"name": &"ground_punch",
+"speed": 3.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mhh36")
@@ -110,15 +129,15 @@ health = 20
 
 [node name="FirePoint" type="Marker2D" parent="."]
 position = Vector2(-20.5084, -9.65101)
-scale = Vector2(1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_f6akx")
 position = Vector2(-2.60417, -4.16667)
 scale = Vector2(1, 0.96875)
 sprite_frames = SubResource("SpriteFrames_h8r36")
-animation = &"idle"
+animation = &"ground_punch"
 autoplay = "walk"
+frame_progress = 0.224251
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.04167, 15.1042)

@@ -1,3 +1,5 @@
+res://Assets
+res://Assets/Enemies/Crab
 res://Assets/Enemies/Crab-Boss
 res://Assets/Enemies/Sentinel
 res://Assets/player_assets
@@ -7,6 +9,5 @@ res://Scripts
 res://Assets/UI
 res://
 res://Assets/Enemies/Animation
-res://Assets/Enemies/Crab
 res://Assets/player_assets/projectiles
 res://Scenes/Main Menu

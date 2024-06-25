@@ -1,7 +1,9 @@
-Timer
-Marker2D
 CollisionShape2D
 Area2D
+Sprite2D
+Node2D
+Timer
+Marker2D
 AnimatedSprite2D
 AudioStreamPlayer
 VBoxContainer
@@ -10,5 +12,3 @@ MarginContainer
 OptionButton
 VSeparator
 Label
-HBoxContainer
-TabBar
