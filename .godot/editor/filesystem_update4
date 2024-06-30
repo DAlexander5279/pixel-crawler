@@ -1,3 +1,4 @@
 res://Scenes/Levels/world_1.tscn
 res://Assets/Enemies/Crab/crab.gdshader
 res://Assets/player_assets/playerhit.tres
+res://Scripts/BackgroundTrigger.gd
