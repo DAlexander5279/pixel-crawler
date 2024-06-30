@@ -1,7 +1,8 @@
 CollisionShape2D
 Area2D
-Sprite2D
-Node2D
+TextureRect
+ParallaxLayer
+ParallaxBackground
 Timer
 Marker2D
 AnimatedSprite2D
@@ -11,4 +12,3 @@ ScrollContainer
 MarginContainer
 OptionButton
 VSeparator
-Label
