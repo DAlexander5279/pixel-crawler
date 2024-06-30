@@ -7,6 +7,11 @@ signal PlayerEntered
 @onready var boss = $"../Crab2"
 @onready var door = $"../Door"
 
+
+var CrabBoss = preload("res://Assets/Enemies/Crab-Boss/crab-boss.tscn")
+@onready var spawnPoint : Marker2D = $BossSpawnPoint
+
+
 var activated = false
 
 #function to see when player enters trigger space
@@ -18,6 +23,10 @@ func _physics_process(delta):
 		if body.name == "player":
 			emit_signal("PlayerEntered")
 			activated = true
+			HealthManager.testSignal = true
+			var bossCrab = CrabBoss.instantiate() as Node2D
+			bossCrab.global_position = spawnPoint.global_position
+			get_parent().add_child(bossCrab)
 			queue_free()
 
 func _ready():

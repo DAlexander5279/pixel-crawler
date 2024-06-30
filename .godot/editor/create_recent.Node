@@ -1,14 +1,14 @@
+Marker2D
+Node
 CollisionShape2D
 Area2D
 TextureRect
 ParallaxLayer
 ParallaxBackground
 Timer
-Marker2D
 AnimatedSprite2D
 AudioStreamPlayer
 VBoxContainer
 ScrollContainer
 MarginContainer
 OptionButton
-VSeparator
