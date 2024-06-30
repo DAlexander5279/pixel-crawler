@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://bypae1lmtban3" path="res://Assets/Sounds/sfx/player_hurt.wav" id="10_puyan"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_penab"]
-size = Vector2(94, 161)
+size = Vector2(71, 167)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rpwpf"]
 radius = 41.0
@@ -397,7 +397,7 @@ playerSpeed = 15000
 jumpForce = -25000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -81.5)
+position = Vector2(1.5, -84.5)
 shape = SubResource("RectangleShape2D_penab")
 
 [node name="FirePoint" type="Marker2D" parent="."]
@@ -405,6 +405,7 @@ position = Vector2(84, -108)
 
 [node name="Hitbox" type="Area2D" parent="."]
 position = Vector2(2, -1)
+scale = Vector2(0.929593, 1.01537)
 collision_mask = 4
 
 [node name="hitCollider" type="CollisionShape2D" parent="Hitbox"]
@@ -418,7 +419,8 @@ position = Vector2(-2, -107)
 scale = Vector2(4.39688, 4.34688)
 sprite_frames = SubResource("SpriteFrames_u5js3")
 animation = &"shoot"
-frame_progress = 0.161824
+frame_progress = 0.215158
+flip_h = true
 
 [node name="invicibilityTimer" type="Timer" parent="."]
 

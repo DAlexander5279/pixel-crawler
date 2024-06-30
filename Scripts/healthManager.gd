@@ -7,6 +7,8 @@ var currentJumps : int = 0
 
 signal healt_change
 
+var testSignal = false
+
 
 
 func _ready():

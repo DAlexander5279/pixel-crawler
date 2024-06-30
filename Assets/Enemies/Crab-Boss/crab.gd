@@ -21,7 +21,7 @@ var deathEffect = preload("res://Assets/Enemies/Animation/death_effect.tscn")
 var direction : Vector2 = Vector2.LEFT 
 
 var pauseAndShoot = false
-
+var isFirstCollision = true
 #raycast variables
 @onready var ledgeCheckleft = $LedgeCheckLeft
 @onready var ledgeCheckRight = $LedgeCheckRight
@@ -112,8 +112,10 @@ func _on_pause_timer_timeout():
 
 
 func _on_buffer_timer_timeout():
-	pauseAndShoot = true
-	pauseTimer.start(5)
+	if isFirstCollision == false:
+		pauseAndShoot = true
+		pauseTimer.start(5)
+	isFirstCollision = false
 
 
 func _on_bullet_cooldown_timeout():
