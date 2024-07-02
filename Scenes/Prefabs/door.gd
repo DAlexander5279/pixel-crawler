@@ -7,10 +7,11 @@ signal isClosed
 @onready var boss_fight_1 = $"../BossFight1" as AudioStreamPlayer
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	if crab_2:
-		crab_2.connect("boss_died", Callable(self,"_on_boss_died"))
+
+		
+func _physics_process(delta):
+	if BossManager.bossHasDied == true:
+		_on_boss_died()
 
 var door_opened = false
 

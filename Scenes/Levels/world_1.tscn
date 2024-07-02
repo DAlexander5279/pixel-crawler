@@ -1910,34 +1910,68 @@ shape = SubResource("RectangleShape2D_o4v04")
 [node name="SpawnerContainer" type="Node" parent="."]
 
 [node name="SpikeSpawner" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
-position = Vector2(1134, 17)
+position = Vector2(1132, 16)
+pattern_1 = true
+pattern_3 = true
+pattern_5 = true
 
 [node name="SpikeSpawner2" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
-position = Vector2(1193, -9)
+position = Vector2(1182, -9)
+pattern_1 = true
+pattern_3 = true
+pattern_5 = true
 
 [node name="SpikeSpawner3" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1242, -8)
+pattern_1 = true
+pattern_3 = true
+pattern_4 = true
+pattern_5 = true
 
 [node name="SpikeSpawner4" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1295, -7)
+pattern_1 = true
+pattern_3 = true
+pattern_4 = true
+pattern_5 = true
 
 [node name="SpikeSpawner5" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1348, -8)
+pattern_1 = true
+pattern_4 = true
+pattern_5 = true
 
 [node name="SpikeSpawner6" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1404, -9)
+pattern_2 = true
+pattern_4 = true
+pattern_5 = true
 
 [node name="SpikeSpawner7" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1458, -10)
+pattern_2 = true
+pattern_3 = true
+pattern_4 = true
+pattern_5 = true
 
 [node name="SpikeSpawner8" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1511, -9)
+pattern_2 = true
+pattern_3 = true
+pattern_4 = true
+pattern_5 = true
 
 [node name="SpikeSpawner9" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1564, -4)
+pattern_2 = true
+pattern_3 = true
+pattern_4 = true
 
 [node name="SpikeSpawner10" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1622, 29)
+pattern_2 = true
+pattern_3 = true
+pattern_4 = true
 
 [connection signal="PlayerEntered" from="Trigger" to="Door" method="_on_trigger_player_entered"]
 [connection signal="PlayerEntered" from="Trigger" to="Door2" method="_on_trigger_player_entered"]
