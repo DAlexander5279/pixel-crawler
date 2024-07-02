@@ -92,6 +92,7 @@ func _on_hitbox_area_entered(area : Area2D):
 		var bullet = area.get_parent() as Node
 		health -= bullet.damage
 		if(health <= 0):
+			BossManager.bossHasDied = true
 			var deatheffectInstance = deathEffect.instantiate() as Node2D
 			deatheffectInstance.global_position = global_position 
 			get_parent().add_child(deatheffectInstance)

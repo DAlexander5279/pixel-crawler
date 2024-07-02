@@ -6,8 +6,19 @@ var spikeNode = preload("res://Assets/EnviormentHazards/spike.tscn")
 
 var isSpawned = false
 
+@export var pattern_1 : bool;
+@export var pattern_2 : bool;
+@export var pattern_3: bool;
+@export var pattern_4 : bool;
+@export var pattern_5 : bool;
+
+
+
 
 func _physics_process(delta):
+	
+	
+	
 	if HealthManager.testSignal == true and isSpawned == false:
 		isSpawned = true
 		var spike = spikeNode.instantiate() as Node2D

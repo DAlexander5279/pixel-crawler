@@ -18,6 +18,7 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 HealthManager="*res://Scripts/healthManager.gd"
+BossManager="*res://Scripts/BossManager.gd"
 
 [display]
 
