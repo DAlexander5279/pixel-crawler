@@ -1804,7 +1804,7 @@ layer_3/tile_data = PackedInt32Array(4128803, 1441792, 3, 4194339, 1441792, 4, 4
 
 [node name="player" parent="." instance=ExtResource("3_he35d")]
 z_index = 1
-position = Vector2(226, 172)
+position = Vector2(1026, 187)
 scale = Vector2(0.3, 0.3)
 collision_mask = 10
 
@@ -1931,7 +1931,6 @@ pattern_5 = true
 [node name="SpikeSpawner4" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1295, -7)
 pattern_1 = true
-pattern_3 = true
 pattern_4 = true
 pattern_5 = true
 
@@ -1950,7 +1949,6 @@ pattern_5 = true
 [node name="SpikeSpawner7" parent="SpawnerContainer" instance=ExtResource("22_qqcov")]
 position = Vector2(1458, -10)
 pattern_2 = true
-pattern_3 = true
 pattern_4 = true
 pattern_5 = true
 

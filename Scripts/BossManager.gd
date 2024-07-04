@@ -6,4 +6,5 @@ var bossHasDied : bool = false
 
 
 #current pattern
-var currentPattern : int
+var currentPattern : int = 0
+var spikeFall : bool = false
