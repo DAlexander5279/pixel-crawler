@@ -16,12 +16,32 @@ var isSpawned = false
 
 
 func _physics_process(delta):
+	if(BossManager.currentPattern == 0):
+		isSpawned = false
 	
-	
-	
-	if HealthManager.testSignal == true and isSpawned == false:
-		isSpawned = true
-		var spike = spikeNode.instantiate() as Node2D
-		#adds bullet as a child to the level
-		spike.global_position = marker.global_position
-		get_parent().add_child(spike)
+	if isSpawned == false and BossManager.currentPattern != 0:
+		match BossManager.currentPattern:
+			1:
+				if pattern_1:
+					spawnSpike()
+			2:
+				if pattern_2:
+					spawnSpike()
+			3:
+				if pattern_3:
+					spawnSpike()
+			4:
+				if pattern_4:
+					spawnSpike()
+			5:
+				if pattern_5:
+					spawnSpike()
+			
+
+
+func spawnSpike():
+	isSpawned = true
+	var spike = spikeNode.instantiate() as Node2D
+	#adds bullet as a child to the level
+	spike.global_position = marker.global_position
+	get_parent().add_child(spike)

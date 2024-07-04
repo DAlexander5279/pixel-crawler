@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bb4tjgbedebra"]
+[gd_scene load_steps=7 format=3 uid="uid://bb4tjgbedebra"]
 
+[ext_resource type="Script" path="res://Assets/EnviormentHazards/spike.gd" id="1_a5xs6"]
 [ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="1_u0q25"]
 [ext_resource type="Texture2D" uid="uid://gm7ybpbcf5k3" path="res://Assets/EnviormentHazards/stalactite.png" id="2_70jkx"]
 
@@ -13,7 +14,14 @@ shader_parameter/line_thickness = 1.952
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0wbq"]
 size = Vector2(31.5, 60)
 
-[node name="spike" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xx6yd"]
+size = Vector2(30, 60)
+
+[node name="spike" type="CharacterBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_a5xs6")
+timerDurcation = 0.75
 
 [node name="Stalactite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_n6h4d")
@@ -21,8 +29,18 @@ position = Vector2(4, -31)
 scale = Vector2(0.921053, 1.13208)
 texture = ExtResource("2_70jkx")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, -31)
+shape = SubResource("RectangleShape2D_q0wbq")
+
+[node name="destroyTimer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemies"]]
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(6, -31)
-shape = SubResource("RectangleShape2D_q0wbq")
+shape = SubResource("RectangleShape2D_xx6yd")
+
+[connection signal="timeout" from="destroyTimer" to="." method="_on_destroy_timer_timeout"]
