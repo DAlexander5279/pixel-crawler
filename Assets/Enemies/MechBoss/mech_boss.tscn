@@ -1,0 +1,384 @@
+[gd_scene load_steps=18 format=3 uid="uid://ba41w0gcrgda"]
+
+[ext_resource type="Texture2D" uid="uid://bn5pn3mhk1s0" path="res://Assets/Enemies/MechBoss/sprites/torso1.png" id="1_bw5uk"]
+[ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="1_cr0hp"]
+[ext_resource type="Texture2D" uid="uid://dpex4un0nvs1v" path="res://Assets/Enemies/MechBoss/sprites/torso3.png" id="2_433uk"]
+[ext_resource type="Texture2D" uid="uid://cgvbuef2j66po" path="res://Assets/Enemies/MechBoss/sprites/torso2.png" id="3_1qs0g"]
+[ext_resource type="Texture2D" uid="uid://ce612cf3lu570" path="res://Assets/Enemies/MechBoss/sprites/forearm-front.png" id="4_8u5t3"]
+[ext_resource type="Texture2D" uid="uid://c6pktbbqa6ydh" path="res://Assets/Enemies/MechBoss/sprites/arm-back-part.png" id="5_barh8"]
+[ext_resource type="Texture2D" uid="uid://dpxufbiwt3knr" path="res://Assets/Enemies/MechBoss/sprites/arm-part.png" id="6_fxu3s"]
+[ext_resource type="Texture2D" uid="uid://bje3ow7pcbms2" path="res://Assets/Enemies/MechBoss/sprites/forearm-back.png" id="7_xk3aq"]
+[ext_resource type="Texture2D" uid="uid://qfnaf0x48gbs" path="res://Assets/Enemies/MechBoss/sprites/lower-torso-1.png" id="8_eunll"]
+[ext_resource type="Texture2D" uid="uid://ck4atw7ev57i7" path="res://Assets/Enemies/MechBoss/sprites/lower-torso-2.png" id="9_2w5p3"]
+[ext_resource type="Texture2D" uid="uid://b6nkq1l2bkwg2" path="res://Assets/Enemies/MechBoss/sprites/lower-torso-3.png" id="10_l1t4a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbqlv"]
+size = Vector2(159, 238.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_smce5"]
+shader = ExtResource("1_cr0hp")
+shader_parameter/enabled = false
+shader_parameter/flash = Color(1, 1, 1, 1)
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 1.773
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_basns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bw5uk")
+}],
+"loop": true,
+"name": &"FullHealth",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_433uk")
+}],
+"loop": true,
+"name": &"LowHealth",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1qs0g")
+}],
+"loop": true,
+"name": &"MidHealth",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_6kxg3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mech/SpriteTorso:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-25, -180)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mech/Arm-partFront1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(31.6979, -153.75)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mech/Arm-partFront2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, -134)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mech/FrontHand:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, -113)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mech/FrontHand:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.00378157]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Mech/ArmPartBack:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-71, -171)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Mech/Forearm-back:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.232557]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Mech/Forearm-back:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-99, -133)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Mech/Lower-torso-1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9, -107)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Mech/Lower-torso-2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18, -78)]
+}
+
+[sub_resource type="Animation" id="Animation_iypdx"]
+resource_name = "idling"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mech/SpriteTorso:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-25, -180), Vector2(-26, -185)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mech/Arm-partFront1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(31.6979, -153.75), Vector2(34, -160)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mech/Arm-partFront2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(40, -134), Vector2(35, -138)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mech/FrontHand:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8, -103), Vector2(7.15256e-07, -107)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mech/FrontHand:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.00378157, 0.126974]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Mech/ArmPartBack:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-71, -171), Vector2(-77, -174)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Mech/Forearm-back:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-99, -133), Vector2(-100, -129)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Mech/Forearm-back:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.232557, -0.437028]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Mech/Lower-torso-1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9, -107), Vector2(8, -109)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Mech/Lower-torso-2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(18, -78), Vector2(15, -82)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ock0m"]
+_data = {
+"RESET": SubResource("Animation_6kxg3"),
+"idling": SubResource("Animation_iypdx")
+}
+
+[node name="MechBoss" type="CharacterBody2D"]
+position = Vector2(-27, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-8.5, -119)
+shape = SubResource("RectangleShape2D_sbqlv")
+
+[node name="Mech" type="Sprite2D" parent="."]
+position = Vector2(17, 16)
+
+[node name="SpriteTorso" type="AnimatedSprite2D" parent="Mech"]
+material = SubResource("ShaderMaterial_smce5")
+position = Vector2(-25, -180)
+rotation = -0.167338
+scale = Vector2(1.47727, 1.47727)
+sprite_frames = SubResource("SpriteFrames_basns")
+animation = &"LowHealth"
+frame_progress = 0.359007
+
+[node name="FrontHand" type="Sprite2D" parent="Mech"]
+z_index = 1
+material = SubResource("ShaderMaterial_smce5")
+position = Vector2(2, -113)
+rotation = 0.00378157
+scale = Vector2(1.27344, 1.27344)
+texture = ExtResource("4_8u5t3")
+
+[node name="ArmPartBack" type="Sprite2D" parent="Mech"]
+z_index = -1
+position = Vector2(-71, -171)
+rotation = -0.942272
+scale = Vector2(1.61249, 1.61249)
+texture = ExtResource("5_barh8")
+
+[node name="Arm-partFront1" type="Sprite2D" parent="Mech"]
+position = Vector2(31.6979, -153.75)
+scale = Vector2(1.6875, 1.6875)
+texture = ExtResource("6_fxu3s")
+
+[node name="Arm-partFront2" type="Sprite2D" parent="Mech"]
+position = Vector2(40, -134)
+scale = Vector2(1.54167, 1.54167)
+texture = ExtResource("6_fxu3s")
+
+[node name="Forearm-back" type="Sprite2D" parent="Mech"]
+z_index = -2
+material = SubResource("ShaderMaterial_smce5")
+position = Vector2(-99, -133)
+rotation = -0.232557
+scale = Vector2(1.3131, 1.3131)
+texture = ExtResource("7_xk3aq")
+
+[node name="Lower-torso-1" type="Sprite2D" parent="Mech"]
+z_index = -1
+position = Vector2(9, -107)
+rotation = 0.285783
+scale = Vector2(1.33446, 1.33446)
+texture = ExtResource("8_eunll")
+
+[node name="Lower-torso-2" type="Sprite2D" parent="Mech"]
+z_index = -2
+position = Vector2(18, -78)
+rotation = 0.153512
+scale = Vector2(1.50014, 1.50013)
+texture = ExtResource("9_2w5p3")
+
+[node name="Lower-torso-3" type="Sprite2D" parent="Mech"]
+z_index = -3
+position = Vector2(23, -53)
+rotation = 0.00168524
+scale = Vector2(1.77064, 1.67)
+texture = ExtResource("10_l1t4a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ock0m")
+}
+autoplay = "idling"

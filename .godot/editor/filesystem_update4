@@ -1,12 +1,4 @@
-res://Scenes/Levels/world_1.tscn
+res://Assets/Enemies/MechBoss/mech_boss.tscn
 res://Assets/Enemies/Crab/crab.gdshader
 res://Assets/player_assets/playerhit.tres
-res://Assets/EnviormentHazards/spike_spawner.tscn
-res://Assets/EnviormentHazards/spike.tscn
 res://Assets/player_assets/player.tscn
-res://Assets/Enemies/Crab-Boss/crab-boss.tscn
-res://Assets/EnviormentHazards/spike_spawner.gd
-res://Scripts/BossManager.gd
-res://Assets/Enemies/Crab-Boss/crab.gd
-res://Assets/EnviormentHazards/spike.gd
-res://Assets/Enemies/Crab-Boss/bolt.tscn

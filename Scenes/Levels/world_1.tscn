@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dlvnd6bypaaj0"]
+[gd_scene load_steps=30 format=3 uid="uid://dlvnd6bypaaj0"]
 
 [ext_resource type="Script" path="res://Scripts/Camera/PanningCamera.gd" id="1_2jdt4"]
 [ext_resource type="Script" path="res://Scenes/Levels/world_1.gd" id="1_s2sib"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://2vl4o8v3487e" path="res://Assets/Environment/layers/lava-background.png" id="19_ellwc"]
 [ext_resource type="Texture2D" uid="uid://c18yxx0i08g75" path="res://Assets/Environment/layers/lava-middleground.png" id="20_b4mah"]
 [ext_resource type="Script" path="res://Scripts/BackgroundTrigger.gd" id="21_0xewl"]
+[ext_resource type="PackedScene" uid="uid://ba41w0gcrgda" path="res://Assets/Enemies/MechBoss/mech_boss.tscn" id="22_eg1l6"]
 [ext_resource type="PackedScene" uid="uid://x4jmgf0rqiin" path="res://Assets/EnviormentHazards/spike_spawner.tscn" id="22_qqcov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
@@ -1804,7 +1805,7 @@ layer_3/tile_data = PackedInt32Array(4128803, 1441792, 3, 4194339, 1441792, 4, 4
 
 [node name="player" parent="." instance=ExtResource("3_he35d")]
 z_index = 1
-position = Vector2(1026, 187)
+position = Vector2(347, 1427)
 scale = Vector2(0.3, 0.3)
 collision_mask = 10
 
@@ -1970,6 +1971,9 @@ position = Vector2(1622, 29)
 pattern_2 = true
 pattern_3 = true
 pattern_4 = true
+
+[node name="MechBoss" parent="." instance=ExtResource("22_eg1l6")]
+position = Vector2(826, 1487)
 
 [connection signal="PlayerEntered" from="Trigger" to="Door" method="_on_trigger_player_entered"]
 [connection signal="PlayerEntered" from="Trigger" to="Door2" method="_on_trigger_player_entered"]
