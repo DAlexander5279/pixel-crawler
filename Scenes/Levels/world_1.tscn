@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dlvnd6bypaaj0"]
+[gd_scene load_steps=31 format=3 uid="uid://dlvnd6bypaaj0"]
 
 [ext_resource type="Script" path="res://Scripts/Camera/PanningCamera.gd" id="1_2jdt4"]
 [ext_resource type="Script" path="res://Scenes/Levels/world_1.gd" id="1_s2sib"]
@@ -22,6 +22,7 @@
 [ext_resource type="Script" path="res://Scripts/Boss2Trigger.gd" id="21_0ssf7"]
 [ext_resource type="Script" path="res://Scenes/Prefabs/door3&4.gd" id="21_tjcob"]
 [ext_resource type="PackedScene" uid="uid://x4jmgf0rqiin" path="res://Assets/EnviormentHazards/spike_spawner.tscn" id="22_qqcov"]
+[ext_resource type="PackedScene" uid="uid://ba41w0gcrgda" path="res://Assets/Enemies/MechBoss/mech_boss.tscn" id="23_ogx20"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
 texture = ExtResource("2_a6ynw")
@@ -2000,8 +2001,12 @@ script = ExtResource("21_0ssf7")
 position = Vector2(442, 1382.25)
 shape = SubResource("RectangleShape2D_tkpth")
 
+[node name="MechBoss" parent="." instance=ExtResource("23_ogx20")]
+position = Vector2(820, 1487)
+scale = Vector2(0.900914, 0.900914)
+
 [connection signal="PlayerEntered" from="Trigger" to="Door" method="_on_trigger_player_entered"]
 [connection signal="PlayerEntered" from="Trigger" to="Door2" method="_on_trigger_player_entered"]
-[connection signal="body_entered" from="Boss2Trigger" to="Boss2Trigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Boss2Trigger" to="Door4" method="_on_boss_2_trigger_body_entered"]
 [connection signal="body_entered" from="Boss2Trigger" to="Door3" method="_on_boss_2_trigger_body_entered"]
+[connection signal="body_entered" from="Boss2Trigger" to="Boss2Trigger" method="_on_body_entered"]
