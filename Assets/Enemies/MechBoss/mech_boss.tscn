@@ -335,6 +335,18 @@ tracks/20/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0.0156863)]
 }
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Mech/upperBoddy/Marker2D:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-21, -164)]
+}
 
 [sub_resource type="Animation" id="Animation_iypdx"]
 resource_name = "idling"
@@ -988,6 +1000,18 @@ tracks/20/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.0156863)]
 }
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Mech/upperBoddy/Marker2D:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-21, -164)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ock0m"]
 _data = {
@@ -1035,7 +1059,7 @@ position = Vector2(-45, 139)
 centered = false
 
 [node name="Marker2D" type="Marker2D" parent="Mech/upperBoddy"]
-position = Vector2(-18, -162)
+position = Vector2(-21, -164)
 rotation = -0.0213572
 
 [node name="SpriteTorso" type="AnimatedSprite2D" parent="Mech/upperBoddy/Marker2D"]
@@ -1054,7 +1078,7 @@ rotation = -0.234173
 scale = Vector2(0.924777, 0.924777)
 sprite_frames = SubResource("SpriteFrames_krdq1")
 autoplay = "default"
-frame_progress = 0.774906
+frame_progress = 0.982655
 
 [node name="laserBody" type="AnimatedSprite2D" parent="Mech/upperBoddy/Marker2D/SpriteTorso/laserBase"]
 visible = false
@@ -1063,7 +1087,7 @@ position = Vector2(-64.169, -0.042171)
 scale = Vector2(0.924777, 0.924777)
 sprite_frames = SubResource("SpriteFrames_wjspu")
 autoplay = "default"
-frame_progress = 0.847181
+frame_progress = 0.0549258
 
 [node name="FrontHand" type="Sprite2D" parent="Mech/upperBoddy/Marker2D"]
 z_index = 1
