@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ba41w0gcrgda"]
+[gd_scene load_steps=30 format=3 uid="uid://ba41w0gcrgda"]
 
 [ext_resource type="Texture2D" uid="uid://bn5pn3mhk1s0" path="res://Assets/Enemies/MechBoss/sprites/torso1.png" id="1_bw5uk"]
 [ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="1_cr0hp"]
@@ -15,9 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://b6nkq1l2bkwg2" path="res://Assets/Enemies/MechBoss/sprites/lower-torso-3.png" id="10_l1t4a"]
 [ext_resource type="Texture2D" uid="uid://dart7v0jti0b4" path="res://Assets/Enemies/MechBoss/sprites/laser1.png" id="10_nuc0b"]
 [ext_resource type="Texture2D" uid="uid://c0s1ol8nf4wgp" path="res://Assets/Enemies/MechBoss/sprites/laser2.png" id="11_k3da4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbqlv"]
-size = Vector2(159, 238.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_smce5"]
 shader = ExtResource("1_cr0hp")
@@ -80,6 +77,12 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00udy"]
+size = Vector2(79.642, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_smqsw"]
+radius = 17.276
 
 [sub_resource type="Animation" id="Animation_6kxg3"]
 length = 0.001
@@ -347,10 +350,59 @@ tracks/21/keys = {
 "update": 0,
 "values": [Vector2(-21, -164)]
 }
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Mech/upperBoddy/Marker2D/SpriteTorso/laserBase/laserBody/Area2D:monitoring")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Mech/upperBoddy/Marker2D/SpriteTorso/laserBase/laserBody/Area2D:monitorable")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Mech/upperBoddy/Marker2D/FrontHand/Area2D:monitoring")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Mech/upperBoddy/Marker2D/FrontHand/Area2D:monitorable")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_7vemc"]
 resource_name = "fist_smash"
 length = 2.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -494,6 +546,30 @@ tracks/11/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Mech/upperBoddy/Marker2D/FrontHand/Area2D:monitoring")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Mech/upperBoddy/Marker2D/FrontHand/Area2D:monitorable")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_n7meb"]
@@ -748,6 +824,7 @@ tracks/9/keys = {
 [sub_resource type="Animation" id="Animation_48h3h"]
 resource_name = "laser"
 length = 5.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -971,10 +1048,10 @@ tracks/18/path = NodePath("Mech/upperBoddy/Marker2D/SpriteTorso/laserBase/laserB
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
-"times": PackedFloat32Array(1.8, 2.1, 3.1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(1.8, 2.1, 3.4, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-64.169, -0.042171), Vector2(-285.146, -0.0421612), Vector2(-285.146, -0.0421612)]
+"values": [Vector2(-64.169, -0.042171), Vector2(-285.146, -0.0421612), Vector2(-285.146, -0.0421612), Vector2(-64.169, -0.042171)]
 }
 tracks/19/type = "value"
 tracks/19/imported = false
@@ -983,10 +1060,10 @@ tracks/19/path = NodePath("Mech/upperBoddy/Marker2D/SpriteTorso/laserBase/laserB
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
-"times": PackedFloat32Array(1.8, 2.1, 3.1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(1.8, 2.1, 3.4, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0.924777, 0.924777), Vector2(7.5211, 0.924777), Vector2(7.5211, 0.924777)]
+"values": [Vector2(0.924777, 0.924777), Vector2(7.5211, 0.924777), Vector2(7.5211, 0.924777), Vector2(0.924777, 0.924777)]
 }
 tracks/20/type = "value"
 tracks/20/imported = false
@@ -1012,6 +1089,30 @@ tracks/21/keys = {
 "update": 0,
 "values": [Vector2(-21, -164)]
 }
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Mech/upperBoddy/Marker2D/SpriteTorso/laserBase/laserBody/Area2D:monitoring")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(1.8, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Mech/upperBoddy/Marker2D/SpriteTorso/laserBase/laserBody/Area2D:monitorable")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(1.8, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ock0m"]
 _data = {
@@ -1022,13 +1123,16 @@ _data = {
 "laser": SubResource("Animation_48h3h")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pjenk"]
+radius = 62.0081
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8y272"]
+size = Vector2(109, 104)
+
 [node name="MechBoss" type="CharacterBody2D"]
 position = Vector2(-27, 7)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-8.5, -119)
-shape = SubResource("RectangleShape2D_sbqlv")
+collision_layer = 3
+collision_mask = 3
 
 [node name="Mech" type="Sprite2D" parent="."]
 position = Vector2(17, 16)
@@ -1089,6 +1193,15 @@ sprite_frames = SubResource("SpriteFrames_wjspu")
 autoplay = "default"
 frame_progress = 0.0549258
 
+[node name="Area2D" type="Area2D" parent="Mech/upperBoddy/Marker2D/SpriteTorso/laserBase/laserBody" groups=["Enemies"]]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mech/upperBoddy/Marker2D/SpriteTorso/laserBase/laserBody/Area2D"]
+position = Vector2(7.18155, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_00udy")
+
 [node name="FrontHand" type="Sprite2D" parent="Mech/upperBoddy/Marker2D"]
 z_index = 1
 material = SubResource("ShaderMaterial_smce5")
@@ -1096,6 +1209,16 @@ position = Vector2(2, -113)
 rotation = 0.00378157
 scale = Vector2(1.27344, 1.27344)
 texture = ExtResource("4_8u5t3")
+
+[node name="Area2D" type="Area2D" parent="Mech/upperBoddy/Marker2D/FrontHand" groups=["Enemies"]]
+collision_layer = 4
+collision_mask = 3
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mech/upperBoddy/Marker2D/FrontHand/Area2D"]
+position = Vector2(-18.1646, 14.719)
+shape = SubResource("CircleShape2D_smqsw")
 
 [node name="ArmPartBack" type="Sprite2D" parent="Mech/upperBoddy/Marker2D"]
 z_index = -1
@@ -1126,4 +1249,12 @@ texture = ExtResource("7_xk3aq")
 libraries = {
 "": SubResource("AnimationLibrary_ock0m")
 }
-autoplay = "idling"
+autoplay = "fist_smash"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, -166)
+shape = SubResource("CircleShape2D_pjenk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(40.5, -58)
+shape = SubResource("RectangleShape2D_8y272")
