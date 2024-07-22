@@ -1,11 +1,5 @@
 res://Scenes/Levels/world_1.tscn
 res://Assets/Enemies/Crab/crab.gdshader
 res://Assets/player_assets/playerhit.tres
-res://Scenes/Prefabs/door3&4.gd
-res://Scenes/Prefabs/LevelTransitionDoor.tscn
-res://Scenes/Prefabs/LevelTransitionDoor.gd
-res://Assets/testing_assets/test_world.tscn
-res://Scenes/Main Menu/EndScreen.tscn
-res://Scenes/Main Menu/EndScreen.gd
-res://Scenes/Main Menu/pause_menu.tscn
-res://Scenes/Main Menu/main_menu.tscn
+res://Assets/Enemies/MechBoss/mech_boss.gdshader
+res://Assets/Enemies/MechBoss/mech_boss.tscn
