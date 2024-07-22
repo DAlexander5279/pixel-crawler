@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://e2xpnn7wb57o"]
+[gd_scene load_steps=13 format=3 uid="uid://e2xpnn7wb57o"]
 
 [ext_resource type="Texture2D" uid="uid://56m1yvx6ds8l" path="res://Assets/Environment/layers/tilesets.png" id="1_14574"]
 [ext_resource type="PackedScene" uid="uid://b257cugvll81a" path="res://Assets/player_assets/player.tscn" id="2_0oan7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bp5we53whymet" path="res://Assets/UI/screen.tscn" id="7_c3gw6"]
 [ext_resource type="PackedScene" uid="uid://cgfqxe6vh6aq8" path="res://Assets/Enemies/Crab-Boss/crab-boss.tscn" id="9_xq3hb"]
 [ext_resource type="PackedScene" uid="uid://c5pjy4i15jhos" path="res://Assets/Enemies/Sentinel/sentinel.tscn" id="10_jacm5"]
+[ext_resource type="PackedScene" uid="uid://cwfn12enmirt6" path="res://Scenes/Prefabs/LevelTransitionDoor.tscn" id="10_tmbrp"]
 [ext_resource type="PackedScene" uid="uid://fm0dg8xq7uab" path="res://Assets/Pickups/DoubleJump.tscn" id="11_r2fxl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
@@ -439,3 +440,7 @@ position = Vector2(152, 179)
 
 [node name="Crab-Boss" parent="." instance=ExtResource("9_xq3hb")]
 position = Vector2(816, 169)
+
+[node name="LevelTransitionDoor" parent="." instance=ExtResource("10_tmbrp")]
+position = Vector2(990, 202)
+scale = Vector2(-1, 1)
