@@ -6,6 +6,7 @@ var door_opened = false
 func _on_boss_2_trigger_body_entered(body):
 	if door_opened:
 		return
+	door_opened = true
 	$AnimationPlayer.play("Active")
 	await get_tree().create_timer(1.3).timeout
 	$AnimationPlayer.play("Closed")

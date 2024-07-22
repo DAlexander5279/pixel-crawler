@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwfn12enmirt6"]
+
+[ext_resource type="Script" path="res://Scenes/Prefabs/LevelTransitionDoor.gd" id="1_vvtac"]
+[ext_resource type="Texture2D" uid="uid://cen0gd6fwfa4q" path="res://Assets/Environment/props/gate-03.png" id="2_d303s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sk0sc"]
+size = Vector2(7, 48)
+
+[node name="LevelTransitionDoor" type="Node2D"]
+script = ExtResource("1_vvtac")
+
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(24, -24)
+texture = ExtResource("2_d303s")
+
+[node name="ExitArea2D" type="Area2D" parent="."]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea2D"]
+position = Vector2(3.5, -24)
+shape = SubResource("RectangleShape2D_sk0sc")
+
+[connection signal="body_entered" from="ExitArea2D" to="." method="_on_exit_area_2d_body_entered"]
