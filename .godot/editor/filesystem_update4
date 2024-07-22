@@ -2,6 +2,7 @@ res://Assets/Enemies/MechBoss/mech_boss.tscn
 res://Assets/Enemies/Crab/crab.gdshader
 res://Assets/player_assets/playerhit.tres
 res://Assets/Enemies/MechBoss/mech_boss.gdshader
+res://Assets/Enemies/MechBoss/mech_boss.gd
 res://Scenes/Levels/world_1.tscn
 res://Assets/EnviormentHazards/spike_spawner.tscn
 res://Assets/EnviormentHazards/spike.tscn

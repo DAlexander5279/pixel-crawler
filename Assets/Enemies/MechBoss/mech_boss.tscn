@@ -1,7 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://ba41w0gcrgda"]
+[gd_scene load_steps=33 format=3 uid="uid://ba41w0gcrgda"]
 
 [ext_resource type="Texture2D" uid="uid://bn5pn3mhk1s0" path="res://Assets/Enemies/MechBoss/sprites/torso1.png" id="1_bw5uk"]
 [ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="1_cr0hp"]
+[ext_resource type="Script" path="res://Assets/Enemies/MechBoss/mech_boss.gd" id="1_hl37h"]
 [ext_resource type="Texture2D" uid="uid://dpex4un0nvs1v" path="res://Assets/Enemies/MechBoss/sprites/torso3.png" id="2_433uk"]
 [ext_resource type="Texture2D" uid="uid://cgvbuef2j66po" path="res://Assets/Enemies/MechBoss/sprites/torso2.png" id="3_1qs0g"]
 [ext_resource type="Texture2D" uid="uid://ce612cf3lu570" path="res://Assets/Enemies/MechBoss/sprites/forearm-front.png" id="4_8u5t3"]
@@ -823,8 +824,7 @@ tracks/9/keys = {
 
 [sub_resource type="Animation" id="Animation_48h3h"]
 resource_name = "laser"
-length = 5.0
-loop_mode = 1
+length = 3.9
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1129,10 +1129,17 @@ radius = 62.0081
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8y272"]
 size = Vector2(109, 104)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_o45gl"]
+radius = 63.5059
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqalh"]
+size = Vector2(108, 101)
+
 [node name="MechBoss" type="CharacterBody2D"]
 position = Vector2(-27, 7)
 collision_layer = 3
 collision_mask = 3
+script = ExtResource("1_hl37h")
 
 [node name="Mech" type="Sprite2D" parent="."]
 position = Vector2(17, 16)
@@ -1199,7 +1206,6 @@ collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mech/upperBoddy/Marker2D/SpriteTorso/laserBase/laserBody/Area2D"]
 position = Vector2(7.18155, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_00udy")
 
 [node name="FrontHand" type="Sprite2D" parent="Mech/upperBoddy/Marker2D"]
@@ -1211,6 +1217,7 @@ scale = Vector2(1.27344, 1.27344)
 texture = ExtResource("4_8u5t3")
 
 [node name="Area2D" type="Area2D" parent="Mech/upperBoddy/Marker2D/FrontHand" groups=["Enemies"]]
+scale = Vector2(1.53556, 1.53556)
 collision_layer = 4
 collision_mask = 3
 monitoring = false
@@ -1249,7 +1256,7 @@ texture = ExtResource("7_xk3aq")
 libraries = {
 "": SubResource("AnimationLibrary_ock0m")
 }
-autoplay = "fist_smash"
+autoplay = "idling"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-9, -166)
@@ -1258,3 +1265,19 @@ shape = SubResource("CircleShape2D_pjenk")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(40.5, -58)
 shape = SubResource("RectangleShape2D_8y272")
+
+[node name="phaseTimer" type="Timer" parent="."]
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(-6, -170)
+shape = SubResource("CircleShape2D_o45gl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(42, -58.5)
+shape = SubResource("RectangleShape2D_jqalh")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="phaseTimer" to="." method="_on_phase_timer_timeout"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
