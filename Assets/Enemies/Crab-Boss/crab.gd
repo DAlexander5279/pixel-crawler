@@ -14,6 +14,8 @@ var bulletCooldown = false
 @onready var coolDownTimer : Timer = $bulletCooldown
 
 
+var powerUp = preload("res://Assets/Pickups/DoubleJump.tscn")
+
 var deathEffect = preload("res://Assets/Enemies/Animation/death_effect.tscn")
 #movement variables
 @export var gravityForce : int = 1000
@@ -192,6 +194,12 @@ func _on_hitbox_area_entered(area : Area2D):
 			BossManager.bossHasDied = true
 			var deatheffectInstance = deathEffect.instantiate() as Node2D
 			deatheffectInstance.global_position = global_position 
+			
+			var pUp = powerUp.instantiate() as Node2D
+			#adds bullet as a child to the level
+			pUp.global_position = global_position
+			get_parent().add_child(pUp)
+			
 			get_parent().add_child(deatheffectInstance)
 			emit_signal("boss_died") #emit the death signal when boss dies
 			queue_free()

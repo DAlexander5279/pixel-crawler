@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dlvnd6bypaaj0"]
+[gd_scene load_steps=33 format=3 uid="uid://dlvnd6bypaaj0"]
 
 [ext_resource type="Script" path="res://Scripts/Camera/PanningCamera.gd" id="1_2jdt4"]
 [ext_resource type="Script" path="res://Scenes/Levels/world_1.gd" id="1_s2sib"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://x4jmgf0rqiin" path="res://Assets/EnviormentHazards/spike_spawner.tscn" id="22_qqcov"]
 [ext_resource type="PackedScene" uid="uid://ba41w0gcrgda" path="res://Assets/Enemies/MechBoss/mech_boss.tscn" id="23_ogx20"]
 [ext_resource type="PackedScene" uid="uid://cwfn12enmirt6" path="res://Scenes/Prefabs/LevelTransitionDoor.tscn" id="24_jhhwj"]
+[ext_resource type="PackedScene" uid="uid://c5pjy4i15jhos" path="res://Assets/Enemies/Sentinel/sentinel.tscn" id="25_5oii1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
 texture = ExtResource("2_a6ynw")
@@ -2015,6 +2016,9 @@ scale = Vector2(0.900914, 0.900914)
 [node name="LevelTransitionDoor" parent="." instance=ExtResource("24_jhhwj")]
 position = Vector2(1060, 1476)
 scale = Vector2(-1, 1)
+
+[node name="sentinel" parent="." instance=ExtResource("25_5oii1")]
+position = Vector2(133, 608)
 
 [connection signal="PlayerEntered" from="Trigger" to="Door" method="_on_trigger_player_entered"]
 [connection signal="PlayerEntered" from="Trigger" to="Door2" method="_on_trigger_player_entered"]

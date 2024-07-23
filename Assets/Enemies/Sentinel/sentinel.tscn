@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://c5pjy4i15jhos"]
 
-[ext_resource type="Script" path="res://Assets/Enemies/Crab/crab.gd" id="1_8nkvj"]
+[ext_resource type="Script" path="res://Assets/Enemies/Sentinel/sentinel.gd" id="1_twyh2"]
 [ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="2_jh05l"]
 [ext_resource type="Texture2D" uid="uid://dfiaqry0qsa3l" path="res://Assets/Enemies/Sentinel/sentinel-sheet.png" id="3_8x3cd"]
 [ext_resource type="Texture2D" uid="uid://c6s6tm63iem2i" path="res://Assets/Enemies/Crab-Boss/crab.png" id="3_p1ssq"]
@@ -115,13 +115,13 @@ size = Vector2(19.987, 4.79169)
 [sub_resource type="CircleShape2D" id="CircleShape2D_l6nf1"]
 radius = 9.38946
 
-[node name="Crab" type="CharacterBody2D" groups=["Enemies"]]
+[node name="sentinel" type="CharacterBody2D" groups=["Enemies"]]
 position = Vector2(3.55271e-15, -24)
 scale = Vector2(1.92, 1.92)
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_8nkvj")
-health = 50
+script = ExtResource("1_twyh2")
+time = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_f6akx")
@@ -156,4 +156,10 @@ position = Vector2(41.1066, -21.4176)
 shape = SubResource("CircleShape2D_l6nf1")
 debug_color = Color(0.952941, 0, 0.54902, 0.419608)
 
+[node name="cooldown" type="Timer" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-12.5, 1.5625)
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]

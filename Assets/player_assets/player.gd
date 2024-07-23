@@ -71,29 +71,37 @@ func flip_projectile_position():
 		bulletMarker.position.x = -projectile_spawn_point.x
 		lastDirection = -1
 
+@onready var cdTimer : Timer = $coolDown
+var cooldown = false
 func shoot(delta):
 	var direction = movement_direction()
-	if direction and Input.is_action_just_pressed("PrimaryFire"):
-		current_state = State.Shooting
-		gunSoundEff.play()
-		var primary_proj = PrimaryProjectile.instantiate() as Node2D
-		#adds bullet as a child to the level
-		primary_proj.global_position = bulletMarker.global_position
-		primary_proj.direction = direction
-		get_parent().add_child(primary_proj)
-		
-	if direction == 0 and Input.is_action_just_pressed("PrimaryFire") and is_on_floor():
-		isShooting = true
-		shootTimer.start()
-		current_state = State.StandShooting
-		gunSoundEff.play()
-		var primary_proj = PrimaryProjectile.instantiate() as Node2D
-		#adds bullet as a child to the level
-		primary_proj.global_position = bulletMarker.global_position
-		primary_proj.direction = lastDirection
-		get_parent().add_child(primary_proj)
-		
-		
+	
+	if cooldown == false:
+		if direction and Input.is_action_just_pressed("PrimaryFire"):
+			cooldown = true
+			cdTimer.start(0.5)
+			current_state = State.Shooting
+			gunSoundEff.play()
+			var primary_proj = PrimaryProjectile.instantiate() as Node2D
+			#adds bullet as a child to the level
+			primary_proj.global_position = bulletMarker.global_position
+			primary_proj.direction = direction
+			get_parent().add_child(primary_proj)
+			
+		if direction == 0 and Input.is_action_just_pressed("PrimaryFire") and is_on_floor():
+			cooldown = true
+			cdTimer.start(0.2)
+			isShooting = true
+			shootTimer.start()
+			current_state = State.StandShooting
+			gunSoundEff.play()
+			var primary_proj = PrimaryProjectile.instantiate() as Node2D
+			#adds bullet as a child to the level
+			primary_proj.global_position = bulletMarker.global_position
+			primary_proj.direction = lastDirection
+			get_parent().add_child(primary_proj)
+			
+			
 		
 
 #pushes player down by a force
@@ -200,3 +208,7 @@ func _on_shoot_timer_timeout():
 	isShooting = false # Replace with function body.
 
 
+
+
+func _on_cool_down_timeout():
+	cooldown = false
