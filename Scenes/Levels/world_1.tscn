@@ -1827,7 +1827,7 @@ layer_3/tile_data = PackedInt32Array()
 
 [node name="player" parent="." instance=ExtResource("3_he35d")]
 z_index = 1
-position = Vector2(364, 1399)
+position = Vector2(89, 178)
 scale = Vector2(0.3, 0.3)
 collision_mask = 10
 
@@ -2013,7 +2013,6 @@ shape = SubResource("RectangleShape2D_tkpth")
 [node name="MechBoss" parent="." instance=ExtResource("23_ogx20")]
 position = Vector2(820, 1487)
 scale = Vector2(0.900914, 0.900914)
-health = 10
 
 [node name="LevelTransitionDoor" parent="." instance=ExtResource("24_jhhwj")]
 position = Vector2(1060, 1476)
