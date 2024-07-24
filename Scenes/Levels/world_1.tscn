@@ -1826,7 +1826,7 @@ layer_3/tile_data = PackedInt32Array()
 
 [node name="player" parent="." instance=ExtResource("3_he35d")]
 z_index = 1
-position = Vector2(66, 185)
+position = Vector2(197, 1463)
 scale = Vector2(0.3, 0.3)
 collision_mask = 10
 

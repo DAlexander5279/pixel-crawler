@@ -8,7 +8,5 @@ func _on_exit_area_2d_body_entered(body):
 		var player = body as CharacterBody2D
 		player.queue_free()
 
-		# Wait for 3 seconds before changing the scene
-		await get_tree().create_timer(3.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/Main Menu/EndScreen.tscn")
 
