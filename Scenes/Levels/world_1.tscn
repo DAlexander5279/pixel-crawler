@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dlvnd6bypaaj0"]
+[gd_scene load_steps=34 format=3 uid="uid://dlvnd6bypaaj0"]
 
 [ext_resource type="Script" path="res://Scripts/Camera/PanningCamera.gd" id="1_2jdt4"]
 [ext_resource type="Script" path="res://Scenes/Levels/world_1.gd" id="1_s2sib"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://ba41w0gcrgda" path="res://Assets/Enemies/MechBoss/mech_boss.tscn" id="23_ogx20"]
 [ext_resource type="PackedScene" uid="uid://cwfn12enmirt6" path="res://Scenes/Prefabs/LevelTransitionDoor.tscn" id="24_jhhwj"]
 [ext_resource type="PackedScene" uid="uid://c5pjy4i15jhos" path="res://Assets/Enemies/Sentinel/sentinel.tscn" id="25_5oii1"]
+[ext_resource type="PackedScene" uid="uid://8bxinb3bh5w6" path="res://Assets/Pickups/health_pickup.tscn" id="26_teixp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuykb"]
 texture = ExtResource("2_a6ynw")
@@ -1826,7 +1827,7 @@ layer_3/tile_data = PackedInt32Array()
 
 [node name="player" parent="." instance=ExtResource("3_he35d")]
 z_index = 1
-position = Vector2(197, 1463)
+position = Vector2(89, 178)
 scale = Vector2(0.3, 0.3)
 collision_mask = 10
 
@@ -2019,6 +2020,37 @@ scale = Vector2(-1, 1)
 
 [node name="sentinel" parent="." instance=ExtResource("25_5oii1")]
 position = Vector2(133, 608)
+
+[node name="sentinel2" parent="." instance=ExtResource("25_5oii1")]
+position = Vector2(2133, 129)
+dir = -1
+
+[node name="Crab2" parent="." instance=ExtResource("6_6fjgx")]
+position = Vector2(1658, 797)
+
+[node name="Crab3" parent="." instance=ExtResource("6_6fjgx")]
+position = Vector2(449, 971)
+
+[node name="Crab4" parent="." instance=ExtResource("6_6fjgx")]
+position = Vector2(820, 972)
+
+[node name="sentinel3" parent="." instance=ExtResource("25_5oii1")]
+position = Vector2(-230, 1089)
+
+[node name="sentinel4" parent="." instance=ExtResource("25_5oii1")]
+position = Vector2(-7, 1410)
+
+[node name="Crab5" parent="." instance=ExtResource("6_6fjgx")]
+position = Vector2(-407, 1420)
+
+[node name="HealthPickup" parent="." instance=ExtResource("26_teixp")]
+position = Vector2(70, 610)
+
+[node name="HealthPickup2" parent="." instance=ExtResource("26_teixp")]
+position = Vector2(636, 886)
+
+[node name="HealthPickup3" parent="." instance=ExtResource("26_teixp")]
+position = Vector2(50, 1408)
 
 [connection signal="PlayerEntered" from="Trigger" to="Door" method="_on_trigger_player_entered"]
 [connection signal="PlayerEntered" from="Trigger" to="Door2" method="_on_trigger_player_entered"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://8bxinb3bh5w6"]
 
 [ext_resource type="Texture2D" uid="uid://dxjwejwpafc15" path="res://Assets/Pickups/health-red 32px.png" id="1_2jvxg"]
-[ext_resource type="Script" path="res://Assets/Pickups/health_pickup.gd" id="1_q1onf"]
+[ext_resource type="Script" path="res://Assets/Pickups/health_pickup2.gd" id="1_hlvok"]
 [ext_resource type="Shader" path="res://Assets/Enemies/Crab/crab.gdshader" id="2_3ofpf"]
 [ext_resource type="AudioStream" uid="uid://dtulrlh5wnh72" path="res://Assets/Sounds/sfx/powerUp.wav" id="3_svr6m"]
 
@@ -17,7 +17,7 @@ shader_parameter/line_thickness = 1.134
 
 [node name="HealthPickup" type="Node2D"]
 scale = Vector2(0.296942, 0.296942)
-script = ExtResource("1_q1onf")
+script = ExtResource("1_hlvok")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(3.36766, 37.0442)

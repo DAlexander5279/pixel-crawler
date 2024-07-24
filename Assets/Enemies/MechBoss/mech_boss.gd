@@ -33,7 +33,7 @@ func attackPhase():
 				print("entered phase")
 			3:
 				phase_player.play("ground smash")
-				phaseTimer.start(2)
+				phaseTimer.start(4.1)
 				print("entered phase")
 		
 	
@@ -58,7 +58,7 @@ func _on_phase_timer_timeout():
 	if idle == false:
 		idle = true
 		phase_player.play("idling")
-		phaseTimer.start(3)
+		phaseTimer.start(1)
 	else:
 		isAttacking = false
 		idle = false
@@ -69,4 +69,5 @@ func _on_hit_box_area_entered(area):
 		var bullet = area.get_parent() as Node
 		health -= bullet.damage
 		if(health <= 0):
+			BossManager.secondBossDied = true
 			queue_free()
