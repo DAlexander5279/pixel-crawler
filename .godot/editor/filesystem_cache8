@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721857090
+::res://::1721859957
 default_bus_layout.tres::AudioBusLayout::5236528704844178561::1715105967::0::1::::<><>::
 impactEffect.gd::GDScript::-1::1713902179::0::1::::<>AnimatedSprite2D<>::
 PlayerDeathEffect.gd::GDScript::-1::1714359884::0::1::::<>Node2D<>::
@@ -12,25 +12,25 @@ icon.svg::CompressedTexture2D::7670971187659585607::1712716940::1712716940::1:::
 death_effect.gd::GDScript::-1::1713902234::0::1::::<>AnimatedSprite2D<>::
 death_effect.tscn::PackedScene::1982516908798294381::1715202616::0::1::::<><>::uid://buktob78w2dw5::::res://Assets/Enemies/Animation/enemy-death.png<>res://Assets/Enemies/Animation/death_effect.gd<>uid://vfqn6ipyftjh::::res://Assets/Sounds/sfx/enemy_death.wav
 enemy-death.png::CompressedTexture2D::3812020061458503150::1713902234::1713902234::1::::<><>::
-::res://Assets/Enemies/Crab/::1721857059
+::res://Assets/Enemies/Crab/::1721859878
 crab-idle.png::CompressedTexture2D::8161993238479373838::1713305786::1713305786::1::::<><>::
 crab-walk.png::CompressedTexture2D::38133677044180235::1713305786::1713305786::1::::<><>::
 crab.gd::GDScript::-1::1721776612::0::1::::<>CharacterBody2D<>::
-crab.gdshader::Shader::-1::1721857059::0::1::::<><>::
-crab.tscn::PackedScene::165462860328045001::1721784234::0::1::::<><>::res://Assets/Enemies/Crab/crab.gd<>uid://dojy3oui4dbqc::::res://Assets/Enemies/Crab/crab-idle.png<>res://Assets/Enemies/Crab/crab.gdshader<>uid://sqb53spav5l::::res://Assets/Enemies/Crab/crab-walk.png
-::res://Assets/Enemies/Crab-Boss/::1721784234
+crab.gdshader::Shader::-1::1721859878::0::1::::<><>::
+crab.tscn::PackedScene::165462860328045001::1721859031::0::1::::<><>::res://Assets/Enemies/Crab/crab.gd<>uid://dojy3oui4dbqc::::res://Assets/Enemies/Crab/crab-idle.png<>res://Assets/Enemies/Crab/crab.gdshader<>uid://sqb53spav5l::::res://Assets/Enemies/Crab/crab-walk.png
+::res://Assets/Enemies/Crab-Boss/::1721859834
 bolt.gd::GDScript::-1::1721774368::0::1::::<>Node2D<>::
 bolt.tscn::PackedScene::3721684243347173462::1721775742::0::1::::<><>::res://Assets/Enemies/Crab-Boss/bolt.gd<>uid://curl5psd2h1js::::res://Assets/Enemies/Crab-Boss/spark.png<>res://Assets/Enemies/Crab-Boss/crab.gdshader
-crab-boss.tscn::PackedScene::5205309122075826057::1721784234::0::1::::<><>::res://Assets/Enemies/Crab-Boss/crab.gd<>res://Assets/Enemies/Crab/crab.gdshader<>uid://c6s6tm63iem2i::::res://Assets/Enemies/Crab-Boss/crab.png
+crab-boss.tscn::PackedScene::5205309122075826057::1721859834::0::1::::<><>::res://Assets/Enemies/Crab-Boss/crab.gd<>res://Assets/Enemies/Crab/crab.gdshader<>uid://c6s6tm63iem2i::::res://Assets/Enemies/Crab-Boss/crab.png
 crab.gd::GDScript::-1::1721769892::0::1::::<>CharacterBody2D<>::
 crab.gdshader::Shader::-1::1716593935::0::1::::<><>::
 crab.png::CompressedTexture2D::6987771156050428590::1716593961::1716593966::1::::<><>::
 pulse.png::CompressedTexture2D::1148450207683972280::1718153938::1718153939::1::::<><>::
 spark.png::CompressedTexture2D::6212434938532868468::1718154083::1718154083::1::::<><>::
-::res://Assets/Enemies/MechBoss/::1721857059
-mech_boss.gd::GDScript::-1::1721682462::0::1::::<>CharacterBody2D<>::
-mech_boss.gdshader::Shader::-1::1721857059::0::1::::<><>::
-mech_boss.tscn::PackedScene::71997261479561126::1721769896::0::1::::<><>::uid://bn5pn3mhk1s0::::res://Assets/Enemies/MechBoss/sprites/torso1.png<>res://Assets/Enemies/Crab/crab.gdshader<>res://Assets/Enemies/MechBoss/mech_boss.gd<>uid://dpex4un0nvs1v::::res://Assets/Enemies/MechBoss/sprites/torso3.png<>uid://cgvbuef2j66po::::res://Assets/Enemies/MechBoss/sprites/torso2.png<>uid://ce612cf3lu570::::res://Assets/Enemies/MechBoss/sprites/forearm-front.png<>uid://c6pktbbqa6ydh::::res://Assets/Enemies/MechBoss/sprites/arm-back-part.png<>uid://dpxufbiwt3knr::::res://Assets/Enemies/MechBoss/sprites/arm-part.png<>uid://bje3ow7pcbms2::::res://Assets/Enemies/MechBoss/sprites/forearm-back.png<>uid://qfnaf0x48gbs::::res://Assets/Enemies/MechBoss/sprites/lower-torso-1.png<>uid://ejetyjsj0n82::::res://Assets/Enemies/MechBoss/sprites/base.png<>uid://ck4atw7ev57i7::::res://Assets/Enemies/MechBoss/sprites/lower-torso-2.png<>uid://dcrsmmmom3vr7::::res://Assets/Enemies/MechBoss/sprites/base2.png<>uid://b6nkq1l2bkwg2::::res://Assets/Enemies/MechBoss/sprites/lower-torso-3.png<>uid://dart7v0jti0b4::::res://Assets/Enemies/MechBoss/sprites/laser1.png<>uid://c0s1ol8nf4wgp::::res://Assets/Enemies/MechBoss/sprites/laser2.png
+::res://Assets/Enemies/MechBoss/::1721859878
+mech_boss.gd::GDScript::-1::1721859396::0::1::::<>CharacterBody2D<>::
+mech_boss.gdshader::Shader::-1::1721859878::0::1::::<><>::
+mech_boss.tscn::PackedScene::71997261479561126::1721859396::0::1::::<><>::uid://bn5pn3mhk1s0::::res://Assets/Enemies/MechBoss/sprites/torso1.png<>res://Assets/Enemies/Crab/crab.gdshader<>res://Assets/Enemies/MechBoss/mech_boss.gd<>uid://dpex4un0nvs1v::::res://Assets/Enemies/MechBoss/sprites/torso3.png<>uid://cgvbuef2j66po::::res://Assets/Enemies/MechBoss/sprites/torso2.png<>uid://ce612cf3lu570::::res://Assets/Enemies/MechBoss/sprites/forearm-front.png<>uid://c6pktbbqa6ydh::::res://Assets/Enemies/MechBoss/sprites/arm-back-part.png<>uid://dpxufbiwt3knr::::res://Assets/Enemies/MechBoss/sprites/arm-part.png<>uid://bje3ow7pcbms2::::res://Assets/Enemies/MechBoss/sprites/forearm-back.png<>uid://qfnaf0x48gbs::::res://Assets/Enemies/MechBoss/sprites/lower-torso-1.png<>uid://ejetyjsj0n82::::res://Assets/Enemies/MechBoss/sprites/base.png<>uid://ck4atw7ev57i7::::res://Assets/Enemies/MechBoss/sprites/lower-torso-2.png<>uid://dcrsmmmom3vr7::::res://Assets/Enemies/MechBoss/sprites/base2.png<>uid://b6nkq1l2bkwg2::::res://Assets/Enemies/MechBoss/sprites/lower-torso-3.png<>uid://dart7v0jti0b4::::res://Assets/Enemies/MechBoss/sprites/laser1.png<>uid://c0s1ol8nf4wgp::::res://Assets/Enemies/MechBoss/sprites/laser2.png<>uid://gm7ybpbcf5k3::::res://Assets/EnviormentHazards/stalactite.png
 ::res://Assets/Enemies/MechBoss/sprites/::1721140366
 arm-back-part.png::CompressedTexture2D::6980302341284327941::1720219312::1720219325::1::::<><>::
 arm-part.png::CompressedTexture2D::8260798728725885251::1720219312::1720219325::1::::<><>::
@@ -46,13 +46,13 @@ lower-torso-3.png::CompressedTexture2D::4589748873733488831::1720219312::1720219
 torso1.png::CompressedTexture2D::98874777745455525::1720219312::1720219325::1::::<><>::
 torso2.png::CompressedTexture2D::5237423013977977008::1720219312::1720219325::1::::<><>::
 torso3.png::CompressedTexture2D::8221801567226464041::1720219312::1720219325::1::::<><>::
-::res://Assets/Enemies/Sentinel/::1721784234
+::res://Assets/Enemies/Sentinel/::1721859834
 crab.gd::GDScript::-1::1716595332::0::1::::<>CharacterBody2D<>::
 crab.gdshader::Shader::-1::1716594797::0::1::::<><>::
 sentinel-sheet.png::CompressedTexture2D::7526750795134655475::1716594857::1716594858::1::::<><>::
 sentinel.gd::GDScript::-1::1721776352::0::1::::<>CharacterBody2D<>::
-sentinel.tscn::PackedScene::6910063191584048882::1721784234::0::1::::<><>::res://Assets/Enemies/Sentinel/sentinel.gd<>res://Assets/Enemies/Crab/crab.gdshader<>uid://dfiaqry0qsa3l::::res://Assets/Enemies/Sentinel/sentinel-sheet.png<>uid://c6s6tm63iem2i::::res://Assets/Enemies/Crab-Boss/crab.png
-sentinelMissle.tscn::PackedScene::5388767667465576422::1721784234::0::1::::<><>::res://Assets/Enemies/Crab-Boss/crab.gdshader<>uid://bngyrsky8xwkp::::res://Assets/Enemies/Sentinel/shoot-spritesheet.png
+sentinel.tscn::PackedScene::6910063191584048882::1721859834::0::1::::<><>::res://Assets/Enemies/Sentinel/sentinel.gd<>res://Assets/Enemies/Crab/crab.gdshader<>uid://dfiaqry0qsa3l::::res://Assets/Enemies/Sentinel/sentinel-sheet.png<>uid://c6s6tm63iem2i::::res://Assets/Enemies/Crab-Boss/crab.png
+sentinelMissle.tscn::PackedScene::5388767667465576422::1721859834::0::1::::<><>::res://Assets/Enemies/Crab-Boss/crab.gdshader<>uid://bngyrsky8xwkp::::res://Assets/Enemies/Sentinel/shoot-spritesheet.png
 shoot-spritesheet.png::CompressedTexture2D::3312750445838484867::1721775628::1721775628::1::::<><>::
 ::res://Assets/EnviormentHazards/::1721769896
 spike.gd::GDScript::-1::1720128835::0::1::::<>CharacterBody2D<>::
@@ -99,17 +99,18 @@ temporaryPlatform.png::CompressedTexture2D::3313580395753193358::1712716940::171
 ::res://Assets/Menus/::1712716940
 background_sprite_1.png::CompressedTexture2D::4959069246617866991::1712716940::1712716940::1::::<><>::
 pixel_crawler_logo.png::CompressedTexture2D::7864157220435469127::1712716940::1712716940::1::::<><>::
-::res://Assets/Pickups/::1721769896
+::res://Assets/Pickups/::1721859032
 doubleJump.png::CompressedTexture2D::4710039051287451192::1717532587::1717532587::1::::<><>::
-DoubleJump.tscn::PackedScene::377240400626079089::1721769896::0::1::::<><>::res://Assets/Pickups/health_pickup.gd<>uid://b8dtwjhjl6k1u::::res://Assets/Pickups/doubleJump.png<>res://Assets/Enemies/Crab/crab.gdshader<>uid://dtulrlh5wnh72::::res://Assets/Sounds/sfx/powerUp.wav
+DoubleJump.tscn::PackedScene::377240400626079089::1721859032::0::1::::<><>::res://Assets/Pickups/health_pickup.gd<>uid://b8dtwjhjl6k1u::::res://Assets/Pickups/doubleJump.png<>res://Assets/Enemies/Crab/crab.gdshader<>uid://dtulrlh5wnh72::::res://Assets/Sounds/sfx/powerUp.wav
 health-red 32px.png::CompressedTexture2D::8793528278934647330::1715202611::1715202611::1::::<><>::
+health_pickup2.gd::GDScript::-1::1721859023::0::1::::<>Node2D<>::
 health_pickup.gd::GDScript::-1::1717532587::0::1::::<>Node2D<>::
-health_pickup.tscn::PackedScene::2319707680616191371::1719162792::0::1::::<><>::uid://dxjwejwpafc15::::res://Assets/Pickups/health-red 32px.png<>res://Assets/Pickups/health_pickup.gd<>res://Assets/Enemies/Crab/crab.gdshader<>uid://dtulrlh5wnh72::::res://Assets/Sounds/sfx/powerUp.wav
-::res://Assets/player_assets/::1721784234
+health_pickup.tscn::PackedScene::2319707680616191371::1721859032::0::1::::<><>::uid://dxjwejwpafc15::::res://Assets/Pickups/health-red 32px.png<>res://Assets/Pickups/health_pickup2.gd<>res://Assets/Enemies/Crab/crab.gdshader<>uid://dtulrlh5wnh72::::res://Assets/Sounds/sfx/powerUp.wav
+::res://Assets/player_assets/::1721859834
 player.gd::GDScript::-1::1721776157::0::1::::<>CharacterBody2D<>::
 player.tres::VisualShader::1447094621900581791::1715623959::0::1::::<><>::
-player.tscn::PackedScene::4345398370603249696::1721784234::0::1::::<><>::res://Assets/player_assets/player.gd<>uid://blesoe6jnrcm1::::res://Assets/player_assets/Animations/player-idle.png<>uid://ckbx5c0lo00rs::::res://Assets/player_assets/Animations/player-jump.png<>uid://c345eeobrpx1t::::res://Assets/player_assets/Animations/player-run.png<>uid://cmyc8khq4h8gp::::res://Assets/player_assets/Animations/player-run-shoot.png<>uid://ctkqrir5y3fgn::::res://Assets/player_assets/Animations/player-stand.png<>uid://7eovdrut50fo::::res://Assets/Sounds/sfx/gun_shot.wav<>uid://d22sp41ob7h3o::::res://Assets/Sounds/sfx/jump.wav<>uid://bmy3orjmcc2ga::::res://Assets/Sounds/sfx/player_death.wav<>uid://bypae1lmtban3::::res://Assets/Sounds/sfx/player_hurt.wav
-playerhit.tres::VisualShader::5161265143485796078::1721784176::0::1::::<><>::
+player.tscn::PackedScene::4345398370603249696::1721859834::0::1::::<><>::res://Assets/player_assets/player.gd<>uid://blesoe6jnrcm1::::res://Assets/player_assets/Animations/player-idle.png<>uid://ckbx5c0lo00rs::::res://Assets/player_assets/Animations/player-jump.png<>uid://c345eeobrpx1t::::res://Assets/player_assets/Animations/player-run.png<>uid://cmyc8khq4h8gp::::res://Assets/player_assets/Animations/player-run-shoot.png<>uid://ctkqrir5y3fgn::::res://Assets/player_assets/Animations/player-stand.png<>uid://7eovdrut50fo::::res://Assets/Sounds/sfx/gun_shot.wav<>uid://d22sp41ob7h3o::::res://Assets/Sounds/sfx/jump.wav<>uid://bmy3orjmcc2ga::::res://Assets/Sounds/sfx/player_death.wav<>uid://bypae1lmtban3::::res://Assets/Sounds/sfx/player_hurt.wav
+playerhit.tres::VisualShader::5161265143485796078::1721857144::0::1::::<><>::
 ::res://Assets/player_assets/Animations/::1715889148
 explosion-6.png::CompressedTexture2D::4553523400258577338::1714359884::1714359884::1::::<><>::
 impact.png::CompressedTexture2D::672380097609675795::1713902179::1713902179::1::::<><>::
@@ -149,14 +150,14 @@ HeartSpriteSheet.png::CompressedTexture2D::5490896750910596315::1712716940::1712
 screen.tscn::PackedScene::3502529207866780859::1719173247::0::1::::<><>::uid://gestvek5otb6::::res://Assets/UI/health_bar.tscn
 ::res://Scenes/::1714359475
 Game.tscn::PackedScene::1326420792384970258::1712716940::0::1::::<><>::
-::res://Scenes/Levels/::1721784233
+::res://Scenes/Levels/::1721859905
 world_1.gd::GDScript::-1::1715890495::0::1::::MainGame<>Node2D<>::
-world_1.tscn::PackedScene::7975487573099747835::1721784233::0::1::::<><>::res://Scripts/Camera/PanningCamera.gd<>res://Scenes/Levels/world_1.gd<>uid://56m1yvx6ds8l::::res://Assets/Environment/layers/tilesets.png<>uid://cgiudmtsg4n3w::::res://Assets/Environment/layers/walls.png<>uid://b257cugvll81a::::res://Assets/player_assets/player.tscn<>uid://d5ewg8e1v8ax::::res://Assets/Environment/layers/props.png<>uid://b8s761wf4tueo::::res://Assets/Environment/layers/background.png<>uid://ck0kkmltaexkh::::res://Assets/Environment/layers/middleground.png<>uid://cmffcnux8ghl::::res://Assets/Enemies/Crab/crab.tscn<>uid://n7jsxtm3iyf::::res://Assets/Environment/layers/tileset.png<>res://Scripts/Trigger.gd<>uid://br1tdy8g6xnah::::res://Scenes/Prefabs/door.tscn<>res://Scenes/Prefabs/door.gd<>uid://bxyhr7j7ttxwg::::res://Scenes/Main Menu/pause_menu.tscn<>uid://cmf0tn02btlwc::::res://Assets/Sounds/Music/Warped Caves.ogg<>uid://d3ah3s8oij6tr::::res://Assets/Sounds/Music/warped-shooting-fx.ogg<>uid://bp5we53whymet::::res://Assets/UI/screen.tscn<>uid://2vl4o8v3487e::::res://Assets/Environment/layers/lava-background.png<>uid://c18yxx0i08g75::::res://Assets/Environment/layers/lava-middleground.png<>res://Scripts/Boss2Trigger.gd<>res://Scenes/Prefabs/door3&4.gd<>uid://x4jmgf0rqiin::::res://Assets/EnviormentHazards/spike_spawner.tscn<>uid://ba41w0gcrgda::::res://Assets/Enemies/MechBoss/mech_boss.tscn<>uid://cwfn12enmirt6::::res://Scenes/Prefabs/LevelTransitionDoor.tscn<>uid://c5pjy4i15jhos::::res://Assets/Enemies/Sentinel/sentinel.tscn
-::res://Scenes/Main Menu/::1721682693
+world_1.tscn::PackedScene::7975487573099747835::1721859905::0::1::::<><>::res://Scripts/Camera/PanningCamera.gd<>res://Scenes/Levels/world_1.gd<>uid://56m1yvx6ds8l::::res://Assets/Environment/layers/tilesets.png<>uid://cgiudmtsg4n3w::::res://Assets/Environment/layers/walls.png<>uid://b257cugvll81a::::res://Assets/player_assets/player.tscn<>uid://d5ewg8e1v8ax::::res://Assets/Environment/layers/props.png<>uid://b8s761wf4tueo::::res://Assets/Environment/layers/background.png<>uid://ck0kkmltaexkh::::res://Assets/Environment/layers/middleground.png<>uid://cmffcnux8ghl::::res://Assets/Enemies/Crab/crab.tscn<>uid://n7jsxtm3iyf::::res://Assets/Environment/layers/tileset.png<>res://Scripts/Trigger.gd<>uid://br1tdy8g6xnah::::res://Scenes/Prefabs/door.tscn<>res://Scenes/Prefabs/door.gd<>uid://bxyhr7j7ttxwg::::res://Scenes/Main Menu/pause_menu.tscn<>uid://cmf0tn02btlwc::::res://Assets/Sounds/Music/Warped Caves.ogg<>uid://d3ah3s8oij6tr::::res://Assets/Sounds/Music/warped-shooting-fx.ogg<>uid://bp5we53whymet::::res://Assets/UI/screen.tscn<>uid://2vl4o8v3487e::::res://Assets/Environment/layers/lava-background.png<>uid://c18yxx0i08g75::::res://Assets/Environment/layers/lava-middleground.png<>res://Scripts/Boss2Trigger.gd<>res://Scenes/Prefabs/door3&4.gd<>uid://x4jmgf0rqiin::::res://Assets/EnviormentHazards/spike_spawner.tscn<>uid://ba41w0gcrgda::::res://Assets/Enemies/MechBoss/mech_boss.tscn<>uid://cwfn12enmirt6::::res://Scenes/Prefabs/LevelTransitionDoor.tscn<>uid://c5pjy4i15jhos::::res://Assets/Enemies/Sentinel/sentinel.tscn<>uid://8bxinb3bh5w6::::res://Assets/Pickups/health_pickup.tscn
+::res://Scenes/Main Menu/::1721859905
 audio_slider_settings.gd::GDScript::-1::1715105967::0::1::::<>Control<>::
 audio_slider_settings.tscn::PackedScene::1542598934856100058::1715105967::0::1::::<><>::res://Scenes/Main Menu/audio_slider_settings.gd
 EndScreen.gd::GDScript::-1::1721682693::0::1::::EndScreen<>Control<>::
-EndScreen.tscn::PackedScene::2993286310746707539::1721682693::0::1::::<><>::res://Scenes/Main Menu/EndScreen.gd
+EndScreen.tscn::PackedScene::2993286310746707539::1721859905::0::1::::<><>::res://Scenes/Main Menu/EndScreen.gd
 main_menu.gd::GDScript::-1::1715890495::0::1::::MainMenu<>Control<>::
 main_menu.tscn::PackedScene::8561252261400311121::1715105967::0::1::::<><>::res://Scenes/Main Menu/main_menu.gd<>uid://ccwhe7y6hx3wl::::res://Assets/Menus/background_sprite_1.png<>uid://dduax53p0lfsn::::res://Scenes/Main Menu/settings_menu.tscn<>uid://bv181yxapt1i7::::res://Assets/Sounds/Music/kim-lightyear-leave-the-world-tonight-chiptune-edit-loop-132102.mp3
 options_display_button.tscn::PackedScene::8136001920886165075::1716595947::0::1::::<><>::
@@ -166,19 +167,19 @@ resolution_mode_button.gd::GDScript::-1::1716595947::0::1::::<>Control<>::
 resolution_mode_button.tscn::PackedScene::5612115094724451152::1716595947::0::1::::<><>::uid://dn6e068csou8r::::res://Scenes/Main Menu/options_display_button.tscn<>res://Scenes/Main Menu/resolution_mode_button.gd
 settings_menu.gd::GDScript::-1::1715105967::0::1::::SettingsMenu<>Control<>::
 settings_menu.tscn::PackedScene::7411158830004814925::1715105967::0::1::::<><>::res://Scenes/Main Menu/settings_menu.gd<>uid://dr22ronmfngpu::::res://Scenes/Main Menu/settings_tab_container.tscn
-settings_tab_container.tscn::PackedScene::8409881065548330018::1716595947::0::1::::<><>::uid://v8im5hm80m5w::::res://Scenes/Main Menu/audio_slider_settings.tscn<>uid://cteb2p0e2v6x2::::res://Scenes/Main Menu/window_mode_button.tscn<>uid://cl7sylkxmnhqm::::res://Scenes/Main Menu/resolution_mode_button.tscn
+settings_tab_container.tscn::PackedScene::8409881065548330018::1721859905::0::1::::<><>::uid://v8im5hm80m5w::::res://Scenes/Main Menu/audio_slider_settings.tscn<>uid://cteb2p0e2v6x2::::res://Scenes/Main Menu/window_mode_button.tscn<>uid://cl7sylkxmnhqm::::res://Scenes/Main Menu/resolution_mode_button.tscn
 window_mode_button.gd::GDScript::-1::1716595947::0::1::::<>Control<>::
 window_mode_button.tscn::PackedScene::6114796667642302525::1716595947::0::1::::<><>::uid://dn6e068csou8r::::res://Scenes/Main Menu/options_display_button.tscn<>res://Scenes/Main Menu/window_mode_button.gd
-::res://Scenes/Prefabs/::1721682693
-door3&4.gd::GDScript::-1::1721682693::0::1::::<>StaticBody2D<>::
-door.gd::GDScript::-1::1719881746::0::1::::<>StaticBody2D<>::
+::res://Scenes/Prefabs/::1721859905
+door3&4.gd::GDScript::-1::1721859822::0::1::::<>StaticBody2D<>::
+door.gd::GDScript::-1::1721859793::0::1::::<>StaticBody2D<>::
 door.tscn::PackedScene::3634465139243390435::1715890495::0::1::::<><>::uid://56m1yvx6ds8l::::res://Assets/Environment/layers/tilesets.png
-LevelTransitionDoor.gd::GDScript::-1::1721682693::0::1::::<>Node2D<>::
+LevelTransitionDoor.gd::GDScript::-1::1721859905::0::1::::<>Node2D<>::
 LevelTransitionDoor.tscn::PackedScene::6328154992657407625::1721682693::0::1::::<><>::res://Scenes/Prefabs/LevelTransitionDoor.gd<>uid://cen0gd6fwfa4q::::res://Assets/Environment/props/gate-03.png
-::res://Scripts/::1721155087
+::res://Scripts/::1721859905
 BackgroundTrigger.gd::GDScript::-1::1719774144::0::1::::<>Area2D<>::
-Boss2Trigger.gd::GDScript::-1::1721155087::0::1::::<>Area2D<>::
-BossManager.gd::GDScript::-1::1720129965::0::1::::<>Node<>::
+Boss2Trigger.gd::GDScript::-1::1721859905::0::1::::<>Area2D<>::
+BossManager.gd::GDScript::-1::1721859375::0::1::::<>Node<>::
 door.gd::GDScript::-1::1713898683::0::1::::<>StaticBody2D<>::
 healthManager.gd::GDScript::-1::1719777886::0::1::::<>Node<>::
 Trigger.gd::GDScript::-1::1719777906::0::1::::<>Area2D<>::
